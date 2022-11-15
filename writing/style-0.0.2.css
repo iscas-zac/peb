@@ -1,0 +1,50 @@
+header {
+  margin-left: 20px;
+  margin-right: 40px;
+  font-size: 45px;
+  grid-area: header;
+  align-self: end;
+  font-family: "Courier", monospace;
+}
+
+nav {
+  font-size: 25px;
+  letter-spacing: 1px;
+  grid-area: nav;
+  align-self: end;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+nav a {
+  margin-left: 20px;
+}
+
+body {
+  color: #444;
+  background-color: #f8f8f8;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 80px auto;
+  grid-template-areas:
+    "header nav ."
+    "ct ct ct";
+}
+
+article {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  grid-area: ct;
+  margin: 30px 5%;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+a {
+  color: #ffa64d
+}
+
+p {
+  margin: 50px auto;
+  font-size: larger;
+}
