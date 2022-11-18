@@ -19,10 +19,14 @@ nav a {
   margin-left: 20px;
 }
 
-body {
-  font-family: "Smiley Sans", oblique;
-  /* https://atelier-anchor.com/typefaces/smiley-sans/ */
+@font-face {
+  font-family: "Smiley Sans";
   src: url("./SmileySans-Oblique.otf.woff2") format("woff2");
+}
+
+body {
+  /* https://atelier-anchor.com/typefaces/smiley-sans/ */
+  font-family: "Smiley Sans", oblique;
   color: #444;
   background-color: #f8f8f8;
   display: grid;
