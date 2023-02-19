@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" type="text/css" href="./style/style-0.0.3.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>23/02/19 回归感想和新清单</title>
+    <meta name="description" content="writings">
+    <meta name="author" content="zac">
+    </head>
+    <body>
+        <header>
+            zac's writing
+        </header>
+        <nav>
+            <a href="/writing/">Writing</a>
+            <a href="/">About</a>
+        </nav>
+        <article>
+            <h1>23/02/19 回归感想和新清单</h1>
+            <p>放了寒假后就把这个在线博客忘在脑后了。其实不仅是它，寒假里也没怎么写东西，等会写个寒假感想在日记里。</p>
+            <p>现在当然要继续行使基本权力，还是放一些我觉得有意思的内容。以下不特别写明来源都是来自 HN。</p>
+            <p><a href="https://hack-words.com/">hack-words </a>是一个复古风的网页猜谜游戏，对我来说主要是锻炼了一下英语。
+                它的特点是用 AI 绘制含有噪声的图像，每当答案接近谜底就会让图像更清晰一点。页面下面附了实现过程。
+                不过不知道为什么有几个字母无法键入，可能有别的题目限制我没看见吧。</p>
+            <p><a href="https://labs.kagi.com/ai/sum">kagi 摘要工具</a>应该是从阮一峰的博客上读到的。
+                它会自动生成页面和为pdf生成摘要。这类工具现在其实不少，而且听说这个后来要收费了。姑且记一下。</p>
+            <p><a href="https://fathy.fr/carbonyl">fathy 老师的新作</a>真是太强了！（然而我一点也没读）
+                本篇应该也来自阮一峰的博客。
+                看了下 F 老师的博客主页目前还是只有两篇文章，但是都是直插浏览器底层的项目，我又有兴趣了……可惜不一定能有时间拜读。
+                这次的作品是TUI端实现的浏览器，需要安装 chromium 依赖，所以我还没用过。</p>
+            <p><a href="https://rpdillon.net/redbean-tiddlywiki-saver.html">单压缩包网页服务器</a>真是让人眼前一黑。
+                我总想知道服务器的最简实现是怎么样，没想到不仅可以做到单文件，而且能在里面加载各种不同的网页和脚本。</p>
+            <p>服务器 redbean 的开发者同时还是 cosmopolitan libc 的开发者<a href="https://justine.lol"> justine</a>。
+                这篇教程也是从阮老师博客上读到的，那一期的确很有东西。
+                本文介绍了具体如何下载 tiddlywiki 的网页模板并导入单文件，时间比较长了甚至有人上传了
+                <a href="https://github.com/amreus/tiddly-bean">成果</a>，考虑到了 Windows 端可能需要特殊处理。</p>
+            <p>我当时复现的时候用 pwsh curl tiddlywiki &gt; wiki.html 这样指令，结果显示白屏，各种重新下载都不行，
+                最后还是在 Arch Linux TUI 里 curl 下来拷贝到 Windows 才能用。看来又是 Windows 端的特殊编码作怪。
+            </p>
+            <p><a href="https://www.twilio.com/blog/comparing-nextjs-nestjs-nuxt-gatsby">这篇同样来自阮老师博客的前端科普</a>我是完整看完的，
+                有个群友的前端技术很厉害，经常说一些听不懂的话。这篇前半段的科普很详尽地解释了渲染框架需要处理的问题和术语。
+                后半段是几个框架的对比，我就不多掺和了。</p>
+            <p>前两天在 HN 还是 <a href="https://lobste.rs">lobster</a> 上看到了有人发了某个
+                <a href="https://www.nethack.org/v367/ports/download-win.html">游戏</a>的新版，我就又去下载了。
+                这是个 D&D 的地下城冒险游戏，可以在命令行端运行。（好像仅此而已？）</p>
+            <p>前天摸鱼的时候玩了好久的<a href="https://quickdraw.withgoogle.com">画画</a>游戏，
+                需要快速画出给定物件，如果机器识别出来就算通过。
+                这个游戏好像很早就有小程序版，可以不用翻墙。我玩的时候有几个词只知道意思不知道形状，看答案算是学习了一把。</p>
+            <p><a href="https://motion-canvas.github.io/">这套动画制作软件</a>先在 github trending 看到，
+                后来在 manim 群里也说到了，和 manim 算是平替，下次也试试看。</p>
+            <p>Godot 引擎的 4.0 正式版快要发布了，在看它的说明时
+                看到<a href="https://editor.godotengine.org/releases/latest/">这个在线版本</a>，以后简单的游戏甚至可以在浏览器里制作，
+                省掉专门下载的功夫。（当然走 wasm 肯定也要下载东西的）</p>
+            <p>不知道为什么，<a href="https://github.com/charmbracelet/vhs">vhs</a> 一直挂在我的 github 个人定制主页上，
+                所以这次我下载来看了看。但是它有好几个依赖：FFmpeg、ttyd，而且 Windows 端配到最后就一直黑屏。
+                在我的 Arch Linux 虚拟机里配了之后，发现实际上还依赖于 chromium，运行之后命令行就没响应，最后虚拟机就报错了。
+                回滚快照反而引发了虚拟机软件的弹窗，最后直接怒而删除，损失了一个配了老长时间的虚拟机。
+                其实那个问题不是虚拟机内部的，而且我之前也遇到过。我新装了一个 NixOS 之后又遇到这个问题，
+                然后就上网查找解决了。在 NixOS 上也可以用包管理装 vhs（的老版本），我不撞南墙不死心地又装了一次且装了chromium，
+                终于看到了生成的 gif。</p>
+            <p>然后是今天看到的，这个叫<a href="https://github.com/robinmoisson/staticrypt"> staticrypt </a>的项目。
+                看上去大致上是个可以加密静态网页的项目，不过不知道加密解密是直接用浏览器原生 js 运算还是如何，后面可以试试。</p>
+            <p>周末的记录就到这里，过两天再看。</p>
+        </article>
+    </body>
+</html>
