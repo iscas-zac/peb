@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" type="text/css" href="./style/style-0.0.3.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>23/03/06 学习 rust + wasm</title>
+    <meta name="description" content="writings">
+    <meta name="author" content="zac">
+    </head>
+    <body>
+        <header>
+            zac's writing
+        </header>
+        <nav>
+            <a href="/writing/">Writing</a>
+            <a href="/">About</a>
+        </nav>
+        <article>
+            <h1>23/03/06 学习 rust + wasm</h1>
+            <p>主要内容仍然是记录网上看到的东西，标注出处。</p>
+            <p><a href="https://www.youtube.com/watch?v=EXoBHxCvxlE">Win 11 ghost 版</a>是个从<a href="https://iui.su">不死鸟每日发布</a>看到的有意思的破解版，
+                优化了游戏体验、跟随最新补丁，只可惜没有官方页面，从 YouTube 跳转比较费眼睛。我安装了一个在虚拟机里，
+                还费了半个下午的时间，主要都花在安装进度条上了。</p>
+            <p><a href="https://owenyoung.com">开发者 Owen 的个人页面</a>和<a href="https://buzzing.cc">他开发的新闻聚合网站</a>，最早是因为 GitHub Trending 中
+                他的翻译插件而了解的。虽然翻译工具本来就比较多，但是可能是缘分，下载下来后感觉果然一些网页还是要翻译着看，于是就用上了。</p>
+            <p><a href="https://suricrasia.online/iceberg">计算机相关 meme 的冰山图</a>最早大概也是从HN上看到的，不过在手机浏览器里吃灰了好久。
+                我保存有意思链接的地方很多，各个浏览器标签页、收藏夹，微信左侧，桌面，等等。后面要逐一关闭并统一收藏到博客或者类似地方。
+                这个图里还是有不少有意思的链接的，不过没怎么更新。</p>
+            <p>去年有点想了解加密货币，于是找来<a href="https://nakamotoinstitute.org/">比特币原始论文</a>看，后面还下载了一个很长的视频，
+                但终究是没有去看。这个页面也是在浏览器里放了好久。</p>
+            <p>类似在浏览器里放了好久的还有<a href="http://networksciencebook.com/">网络科学官网</a>、SICP HTML 版和 Crafting Interpreters 官网，
+                还有一篇本打算练手翻译的《烈火魔尘》的中英双版。</p>
+            <p>最后说说我前两天学习<a href="https://rustwasm.github.io/docs/book">  Rust + wasm </a>的经历。这个网页也是吃灰的一员，上次细看已经是去年。
+                只记得到 Setup 步骤的时候都没什么问题。结果现在运行第一个命令 <code>wasm-pack build</code> 就不响应。等了一会后，跟着<a href="https://sacul.github.io/rust/cargo_proxy">网上</a>配了 cargo 的代理，
+                问题莫名解决了。</p>
+            <p>接着做吧，然后 <code>npm init wasm-app www</code> 的时候发现 pwsh 里输出的是乱码。这算是个可以忽略的小问题，不过想起之前 <code>cargo-install</code> 时也出现过乱码，既然开始做了就要全都解决掉。
+                看了一些问答，还是要用 Windows Terminal，但开始菜单里都无法唤出（现在发现要输入“终端”），在打开 Microsoft Store 后又发现可以直接打开，
+                于是直接设为默认。</p>
+            <p>运行 <code>npm install & npm run start</code> 时又发现服务器自动退出，查询 <code>Error: error:0308010C:digital envelope routines::unsupported</code> 后得知，
+                需要为<a href="https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported">历史版本兼容</a>考虑而添加一行 <code>$env:NODE_OPTIONS = "--openssl-legacy-provider"</code> 命令。</p>
+            <p>好不容易网页可以打开了，服务器反复报错找不到文件 <code>Module not found: Error: Can't resolve 'wasm_game_of_life'</code>。试了<a href="https://github.com/rustwasm/wasm_game_of_life/issues/41">官方仓库底下的回答</a>
+                才发现是之前生成的时候少了一个 package.json 文件。报错潮终于落下帷幕。</p>
+        </article>
+    </body>
+</html>
