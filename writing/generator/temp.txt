@@ -1,0 +1,51 @@
+尝试新网页工具
+
+{{query "grid-world" "https://alex.miller.garden/grid-world/" "Hacker News" "https://news.ycombinator.com" 0.8 "graphics" "https://en.wikipedia.org/wiki/Graphics" 0.6 "blog" "" 0.6 }}一篇博客文章，但是页面不知道怎么做到的效果，居然和文字相互覆盖又有微弱的界限。
+
+<p></p>
+
+{{query "single-command-server-bootstrap" "https://galowicz.de/2023/04/05/single-command-server-bootstrap/" "Hacker News" "https://news.ycombinator.com" 0.8 "NixOS" "https://nixos.org" 0.9 "Linux" "https://https://www.linux.org" 0.9}}单行命令（+配置文件）重装任意 linux 为 NixOS，可以学习一下。
+
+ 
+
+{{query "WebGPU" "https://developer.chrome.com/blog/webgpu-release" "Hacker News" "https://news.ycombinator.com" 0.8 "graphics" "" 0.9 "Web" "" 0.9 "Chrome" "https://www.google.com/chrome" 0.9}}早就看到的消息，Chrome 113 beta 发布，实装 WebGPU 功能。我也因此在学习 <a href="https://jinleili.github.io/learn-wgpu-zh">wgpu</a>。
+
+{{query "Mach Engine" "https://machengine.org" "Zig" "https://ziglang.org" 0.9 "graphics" "" 0.8 "game" "" 0.8 "hacker" "" 0.7}}看 WebGPU 的讨论贴顺便看到的，不是你怎么一周能编程 100 小时啊！
+
+{{query "surma-WebGPU" "https://surma.dev/things/webgpu/index.html" "WebGPU" "" 0.9 "blog" "" 0.9 "review" "" 0.5}}关于 WebGPU 的一篇排版很漂亮的博文。
+
+{{query "modeling-git-internals" "https://bytes.zone/posts/modeling-git-internals-in-alloy-part-2-commits-and-tags" "git" "https://git-scm.com" 0.8}}还没看，大概是一篇复现 git 的文章。
+
+{{query "spaceship-scene" "https://floor796.com" "Hacker News" "" 0.5 "old-fashioned web" "" 0.6}}持续创作中的流行文化画卷，科幻感和复古感并举。
+
+{{query "grep-search" "https://grep.help" "Hacker News" "" 0.8 "search engine" "https://en.wikipedia.org/wiki/Search_engine" 0.8}}新搜索引擎，但目前搜索量有限额。
+
+{{query "vitling-swarm" "https://www.vitling.xyz/toys/swarm" "Hacker News" "" 0.8 "graphics" "" 0.8}}漂亮的网页动画，黑暗背景下无数寻光飞舞的小亮点。
+
+{{query "semaphore-keyboard" "https://github.com/everythingishacked/Semaphore" "GitHub" "https://github.com" 0.9 "Hacker News" "" 0.8 "computer vision" "https://en.wikipedia.org/wiki/Computer_vision" 0.7 "keyboard" "https://en.wikipedia.org/wiki/Computer_keyboard" 0.8 "creative" "" 0.8}}莫名好笑，类比旗语，用每个姿势识别输入单个字母。
+
+{{query "borretti-spaced-repetition" "https://borretti.me/article/effective-spaced-repetition" "Hacker News" "" 0.8 "spaced repetition" "https://en.wikipedia.org/wiki/Spaced_repetition" 0.9 "memorization" "" 0.8 "review" "" 0.7}}关于空间重复记忆法的说明。
+
+{{query "comicss" "https://comicss.art" "dev.to" "https://dev.to" 0.8 "meme" "" 0.7 "comics" "" 0.8 "CSS" "https://developer.mozilla.org/en-US/docs/Web/CSS" 0.8 "graphics" "" 0.5}}从 dev.to 上看到的漫画网站，有几条还比较有意思。最厉害的是用 CSS 画出来。
+
+{{query "HN-open-course-35536042" "https://news.ycombinator.com/item?id=35536042" "Hacker News" "" 0.9 "course" "" 0.8 "review" "" 0.6 "online" "" 0.6}}HN 上的免费公开课咨询帖。
+
+{{query "Animated-Drawings" "https://fairanimateddrawings.com/site/home" "Hacker News" "" 0.8 "AI" "" 0.7 "graphics" "" 0.4 "creative" "" 0.8}}让手绘的小人动起来。
+
+{{query "phind" "https://www.phind.com/" "Hacker News" "" 0.8 "search engine" "" 0.9 "AI" "" 0.8 "useful" "" 0.9}}比较专业的 AI 辅助搜索引擎，需要访问外网。
+
+{{query "OpenAI-GPT-mirrors" "https://github.com/xx025/carrot" "AI" "" 0.7 "GitHub" "" 0.9}}OpenAI GPT 镜像站点，万一用得上呢？保守起见还是存个找得到的链接。
+
+{{query "Apollo-realtime" "https://apolloinrealtime.org/13/" "Hacker News" "" 0.8 "graphics" "" 0.3 "Hacker News" "" 0.8 "simulation" "https://en.wikipedia.org/wiki/Simulation" 0.7 "creative" "" 0.8 "apollo project" "https://en.wikipedia.org/wiki/Apollo_program" 0.9}}阿波罗航天的“回放”。
+
+{{query "gwern-gpt" "https://gwern.net/gpt-3" "Hacker News" "" 0.8 "AI" "" 0.8 "creative work" "" 0.8 "review" "" 0.7 "blog" "" 0.8}}应该是比较早的长文，GPT-3 创作相关的思考。
+
+{{query "spin-with-css" "https://x.st/spinning-diagrams-with-css" "Hacker News" "" 0.8 "CSS" "" 0.9 "graphics" "" 0.5 "math" "https://en.wikipedia.org/wiki/Mathematics" 0.4 "blog" "" 0.8 "creative" "" 0.6 "20230422" "" 1.0}}使用 CSS 进行 3D 旋转的技巧。
+
+{{query "stretch-at-work" "https://stretch15.com/" "Hacker News" "" 0.8 "20230422" "" 1.0 "sports" "" 0.8 "review" "" 0.8}}办公室伸展运动指南。
+
+{{query "TxtNet-Browser" "https://github.com/lukeaschenbrenner/TxtNet-Browser" "Hacker News" "" 0.8 "GitHub" "" 0.9 "computer network" "https://en.wikipedia.org/wiki/Computer_network" 0.8 "browser" "https://en.wikipedia.org/wiki/Web_browser" 0.9 "creative" "" 0.8 "20230423" "" 1.0}}通过短信浏览Internet文本。
+
+{{query "SQL-game" "https://lost-at-sql.therobinlord.com/" "Hacker News" "" 0.8 "game" "" 0.9 "SQL" "https://en.wikipedia.org/wiki/SQL" 0.8 "creative" "" 0.5 "graphics" "" 0.4 "20230423" "" 1.0}}介绍 SQL 的游戏，制作得还可以。
+
+这些链接也好，别的也好，如果能看到交互响应，那么都是软件根据我编写的模板生成的。目前生成工作仍然比较偏手工。这些是两周多的内容。之后看情况再打磨软件。

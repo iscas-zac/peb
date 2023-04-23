@@ -1,0 +1,79 @@
+header {
+    margin-left: 20px;
+    margin-right: 40px;
+    font-size: 45px;
+    grid-area: header;
+    align-self: end;
+    font-family: "Courier", monospace;
+}
+
+nav {
+    font-size: 25px;
+    letter-spacing: 1px;
+    grid-area: nav;
+    align-self: end;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+nav a {
+    margin-left: 20px;
+}
+
+@font-face {
+    font-family: "Smiley Sans";
+    /* https://atelier-anchor.com/typefaces/smiley-sans/ */
+    src: url("./SmileySans-Oblique.otf.woff2");
+}
+
+body {
+    color: #444;
+    background-color: #f8f8f8;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 80px auto;
+    grid-template-areas:
+        "header nav ."
+        "ct ct ct";
+}
+
+article {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    grid-area: ct;
+    margin: 30px 5%;
+}
+
+h1 {
+    font-family: "Smiley Sans";
+    font-size: 26px;
+}
+
+a {
+    color: #ffa64d;
+}
+
+p {
+    margin: 50px auto;
+    font-size: larger;
+}
+
+#tag {
+    display: inline-block;
+}
+
+#tag:hover .bubble {
+    display: inline-block;
+}
+
+.bubble {
+    display: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    animation: bubble 0.5s ease;
+    opacity: 0.7;
+}
+
+#bubble:hover {
+    display: inline-block;
+}
