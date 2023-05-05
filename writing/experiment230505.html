@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" type="text/css" href="./style/style-0.0.4.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>05/05 改进和新玩具</title>
+    <meta name="description" content="writings">
+    <meta name="author" content="zac">
+    </head>
+    <body>
+        <header>
+            zac's writing
+        </header>
+        <nav>
+            <a href="/writing/">Writing</a>
+            <a href="/">About</a>
+        </nav>
+        <article>
+            <h1>05/05 改进和新玩具</h1>
+            <p>试了下 <span id="tag"><a href="https://pest.rs/">pest</a>
+                            <span class="bubble">tool</span>
+                            <span class="bubble"><a href=https://www.rust-lang.org/>Rust</a></span>
+                            <span class="bubble"><a href=https://en.wikipedia.org/wiki/Parsing>parser</a></span>
+                            <span class="bubble">20230428</span></span> 来作为这个页面从简单的纯文本解析到 HTML 的工具。本来一直在用 <span id="tag"><a href="https://github.com/sunng87/handlebars-rust">Handlebars</a>
+                            <span class="bubble"><a href=https://en.wikipedia.org/wiki/Parsing>parser</a></span>
+                            <span class="bubble">tool</span>
+                            <span class="bubble"><a href=https://www.rust-lang.org/>Rust</a></span>
+                            <span class="bubble">20230428</span></span> 作为一体化工具，但是还是不太会用，再加上在原始文件总要加个辅助函数的名字来指示“这里需要解析”，于是愤而直接用它的解析工具先过一段解析。当然现在的代码仍然有些臃肿，不知道能否进一步简化。</p>
+            <p>现在的这个网页，就是用了语法解析器 + 正则替换 + Handlebars 注水一系列操作后，从一个 temp.txt 文本文档变来的。目前的功能相当有限，仅仅是为每个链接在后台连上几个其他标签并显示出来而已，而且代码也复杂得很。只能希望后面重构和升级能改善这一现状。另外，我也很想改善一下显示效果，这一点就要着落在 CSS 上了。</p>
+            <p>以下是两周内的时事播报，仍然节选的是我感兴趣和想学的内容。</p>
+            <p>又是随便翻到的 <span id="tag"><a href="https://retrogmz.com/">retrogmz</a>
+                            <span class="bubble"><a href=&quot;https://news.ycombinator.com&quot;>Hacker News</a></span>
+                            <span class="bubble"><a href=&quot;&quot;>game</a></span>
+                            <span class="bubble">20230427</span></span>，好像是在纯静态网页上托管的几个网页游戏。</p>
+            <p><span id="tag"><a href="https://news.ycombinator.com/item?id=35697627">transformer-from-scratch-HN</a>
+                            <span class="bubble"><a href=&quot;https://news.ycombinator.com&quot;>Hacker News</a></span>
+                            <span class="bubble">resource</span>
+                            <span class="bubble"><a href=&quot;&quot;>review</a></span>
+                            <span class="bubble"><a href=https://arxiv.org/abs/1706.03762>transformer</a></span>
+                            <span class="bubble">20230427</span></span> 关于 transformer 应该知道的一切，我可能想做一期相关的视频。</p>
+            <p>值得关注的 HTML 新标签 <span id="tag"><a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element">html-search-tag</a>
+                            <span class="bubble"><a href=https://developer.mozilla.org/en-US/docs/Web/HTML>HTML</a></span>
+                            <span class="bubble"><a href=https://http://www.ruanyifeng.com>ruanyf</a></span>
+                            <span class="bubble">20230428</span></span>，居然在 MDN 上还没更新。</p>
+            <p><span id="tag"><a href="https://cohost.org/blackle/post/42994-div-style-pointer">css-mechanical-blackleposting</a>
+                            <span class="bubble"><a href=&quot;&quot;>creative</a></span>
+                            <span class="bubble"><a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS&quot;>CSS</a></span>
+                            <span class="bubble"><a href=https://http://www.ruanyifeng.com>ruanyf</a></span>
+                            <span class="bubble">20230428</span></span> 是一个纯用 CSS 完成的交互动画演示。</p>
+            <p>如何用 <span id="tag"><a href="https://github.com/liaokongVFX/LangChain-Chinese-Getting-Started-Guide">langchain-guide-liaokongVFX</a>
+                            <span class="bubble">resource</span>
+                            <span class="bubble"><a href=https://http://www.ruanyifeng.com>ruanyf</a></span>
+                            <span class="bubble"><a href=https://python.langchain.com/en/latest/>langchain</a></span>
+                            <span class="bubble">20230428</span></span> 连接 OpenAI API 和搜索引擎等外部资源的介绍，存一下，万一要用到呢。</p>
+            <p>录制实时编写代码的库 <span id="tag"><a href="https://rety.verou.me/">rety</a>
+                            <span class="bubble"><a href=&quot;&quot;>creative</a></span>
+                            <span class="bubble"><a href=&quot;&quot;>review</a></span>
+                            <span class="bubble">live coding</span>
+                            <span class="bubble">presentation</span>
+                            <span class="bubble"><a href=https://http://www.ruanyifeng.com>ruanyf</a></span>
+                            <span class="bubble">20230428</span></span>，可以嵌入网页等，作为展示材料。</p>
+            <p>看完了介绍图形学早期历史的 <span id="tag"><a href="https://www.filfre.net/2023/04/the-next-generation-in-graphics-part-1-three-dimensions-in-software-or-quake-and-its-discontents/">generation in graphics</a>
+                            <span class="bubble"><a href=&quot;https://news.ycombinator.com&quot;>Hacker News</a></span>
+                            <span class="bubble"><a href=&quot;https://en.wikipedia.org/wiki/Graphics&quot;>graphics</a></span>
+                            <span class="bubble">history</span>
+                            <span class="bubble">20230428</span></span>，确实给我这种生长在异国的年轻人长了不少见识，比如知道了 <span id="tag"><a href="https://en.wikipedia.org/wiki/John_Carmack">John Carmack</a>
+                            <span class="bubble"><a href=&quot;https://en.wikipedia.org/wiki/Graphics&quot;>graphics</a></span>
+                            <span class="bubble">celebrity</span>
+                            <span class="bubble"><a href=&quot;&quot;>game</a></span></span> 这位名人的历史地位。</p>
+            <p><span id="tag"><a href="https://doublespeak.chat/">doublespeak</a>
+                            <span class="bubble"><a href=https://en.wikipedia.org/wiki/Prompt_engineering>prompt engineering</a></span>
+                            <span class="bubble">hack</span>
+                            <span class="bubble"><a href=https://lobste.rs>Lobsters</a></span>
+                            <span class="bubble"><a href=https://chat.openai.com>OpenAI GPT</a></span>
+                            <span class="bubble">20230430</span></span> 有点像我理解中的 CTF，是让 GPT 保存一个 flag 而让玩家尝试获取它。打了五关，实际上除了第二关没怎么使用黑科技。</p>
+            <p>在 <span id="tag"><a href="https://www.bilibili.com/video/av90798049">GAMES101</a>
+                            <span class="bubble"><a href=&quot;https://en.wikipedia.org/wiki/Graphics&quot;>graphics</a></span>
+                            <span class="bubble">resource</span></span> 看到的数学编辑器 <span id="tag"><a href="https://www.mathcha.io/">mathcha</a>
+                            <span class="bubble">tool</span>
+                            <span class="bubble"><a href=&quot;https://en.wikipedia.org/wiki/Mathematics&quot;>math</a></span>
+                            <span class="bubble">text editor</span>
+                            <span class="bubble">20230430</span></span>，先存一下。</p>
+            <p>应该是介绍 Shell 的一些材料 <span id="tag"><a href="https://github.com/dylanaraps/pure-sh-bible">pure-sh-bible</a>
+                            <span class="bubble"><a href=&quot;&quot;>review</a></span>
+                            <span class="bubble">resource</span>
+                            <span class="bubble"><a href=&quot;https://news.ycombinator.com&quot;>Hacker News</a></span>
+                            <span class="bubble"><a href=https://en.wikipedia.org/wiki/Shell_(computing)>shell</a></span>
+                            <span class="bubble">20230502</span></span>，上次看了另一个（可能就是 README 顶上那个链接），值得之后回顾一下。不过看起来好久没有更新了。</p>
+            <p>随着 <span id="tag">chrome</span> 113 的正式上线，WebGPU 也接近成熟。有人写了一篇 WebGPU 相关的历史介绍和一些简单的说明 <span id="tag"><a href="https://cohost.org/mcc/post/1406157-i-want-to-talk-about-webgpu">talk-about-webgpu</a>
+                            <span class="bubble"><a href=&quot;https://en.wikipedia.org/wiki/Graphics&quot;>graphics</a></span>
+                            <span class="bubble"><a href=&quot;https://news.ycombinator.com&quot;>Hacker News</a></span>
+                            <span class="bubble"><a href=https://www.w3.org/TR/webgpu/>webGPU</a></span>
+                            <span class="bubble">20230504</span></span>。</p>
+            <p>国内开发者在开源社区里相对比较隐姓埋名，但其实也有不少，而且点子也让我相当感兴趣。今天想起来查了一下 <span id="tag"><a href="https://xmake.io/">xmake</a>
+                            <span class="bubble">C</span>
+                            <span class="bubble">compiler</span>
+                            <span class="bubble">20230504</span></span> 的材料，感觉还是挺想试试的。作者在知乎里提到了结构化编辑器 <span id="tag"><a href="https://zhuanlan.zhihu.com/p/620867294">mogan</a>
+                            <span class="bubble">text editor</span>
+                            <span class="bubble"><a href=https://www.texmacs.org/>GNU TeXmacs</a></span>
+                            <span class="bubble">20230504</span></span> 和双方团队的一些合作。我印象中 mogan 的作者还在 <span id="tag"><a href="https://www.v2ex.com/">V2EX</a></span> 上提到过<a href="https://www.v2ex.com/t/891914?p=1">构想中的结构化编程语言</a>，不过现在看来主要在开发编辑器。</p>
+            <p>在 GitHub 上看到了 <span id="tag"><a href="https://github.com/jesseduffield/lazygit">lazygit</a>
+                            <span class="bubble"><a href=&quot;https://github.com&quot;>GitHub</a></span>
+                            <span class="bubble"><a href=&quot;https://git-scm.com&quot;>git</a></span>
+                            <span class="bubble">user interface</span>
+                            <span class="bubble">20230504</span></span>，看了一下是 GitHub 上非官方 git 扩展中最多 star 的，安装了一个试试看。</p>
+            <p>在<a href="http://www.ruanyifeng.com/blog/2023/05/weekly-issue-253.html">阮一峰周刊上</a>看到了 <span id="tag"><a href="https://epochai.org/blog/will-we-run-out-of-ml-data-evidence-from-projecting-dataset">run-out-of-ml-data</a>
+                            <span class="bubble"><a href=&quot;&quot;>creative</a></span>
+                            <span class="bubble">academic paper</span>
+                            <span class="bubble"><a href=https://en.wikipedia.org/wiki/Machine_learning>machine learning</a></span>
+                            <span class="bubble"><a href=https://http://www.ruanyifeng.com>ruanyf</a></span>
+                            <span class="bubble">20230505</span></span>，认为几年至几十年后制约大模型发展的会是数据量，这倒是个新奇的思路。</p>
+            <p>我可能不会读 <span id="tag"><a href="https://cstack.github.io/db_tutorial/">sqlite-diy</a>
+                            <span class="bubble"><a href=https://sqlite.org/>SQLite</a></span>
+                            <span class="bubble"><a href=&quot;&quot;>review</a></span>
+                            <span class="bubble"><a href=&quot;https://news.ycombinator.com&quot;>Hacker News</a></span>
+                            <span class="bubble">tutorial</span>
+                            <span class="bubble">20230505</span></span>，但是这样一个自己实现 SQLite 的想法仍然很 exciting。</p>
+            <p>居然有人在 Hacker News 上发了 MTGA 逆向的内容 <span id="tag"><a href="https://news.ycombinator.com/item?id=35824115">Heisting-20-Million-in-Magic-Cards</a>
+                            <span class="bubble"><a href=&quot;https://news.ycombinator.com&quot;>Hacker News</a></span>
+                            <span class="bubble">bug</span>
+                            <span class="bubble"><a href=https://magic.wizards.com/en/mtgarena>Magic: The Gathering Arena</a></span>
+                            <span class="bubble"><a href=https://en.wikipedia.org/wiki/Reverse_engineering>reverse engineering</a></span>
+                            <span class="bubble">20230505</span></span>，对我来说最有意义的一点就是知道了 MTGA 协议和逆向都是有人做过的，想用可以直接用。</p>
+            <p>新看到了 bilibili TheCW 的新视频 <span id="tag"><a href="https://www.bilibili.com/video/BV1zc411T7j7">linux-2-year</a>
+                            <span class="bubble"><a href=&quot;https://github.com&quot;>GitHub</a></span>
+                            <span class="bubble"><a href=&quot;https://git-scm.com&quot;>git</a></span>
+                            <span class="bubble">user interface</span>
+                            <span class="bubble">20230504</span>
+                            <span class="bubble"><a href=https://github.com/jesseduffield/lazygit>lazygit</a></span>
+                            <span class="bubble"><a href=https://neovim.io/>neovim</a></span>
+                            <span class="bubble"><a href=https://ranger.github.io/>ranger</a></span>
+                            <span class="bubble"><a href=https://github.com/tmux/tmux>tmux</a></span>
+                            <span class="bubble"><a href=https://www.apple.com/macbook-pro/>Apple Mac</a></span>
+                            <span class="bubble"><a href=https://archlinux.org/>Arch Linux</a></span>
+                            <span class="bubble"><a href=https://www.bilibili.com>bilibili</a></span>
+                            <span class="bubble">20230505</span></span>。我并不是他的粉丝，只是听说过这位，看到新视频于是进去看一眼。他说起自己的工作流配置，让我觉得比较有收获。这让我想起<a href="https://www.ysjf.com/index">影视飓风</a>，虽然我没有关注它的账号，新视频也没怎么看，但是确实看到了它的更新速度和质量，我会把它评为我在 bilibili 上看到过的最有知识价值的账号。</p>        </article>
+    </body>
+</html>
