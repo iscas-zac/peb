@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>母亲节快乐</title>
+    <style>
+        .snowfall-flakes:before {
+            transform: rotate(-45deg);
+        }
+
+        .snowfall-flakes:after {
+            transform: rotate(45deg);
+            left: 7px;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            background-color: #da5a95;
+        }
+        h1 {
+            color: tomato;
+            font-family: 'Lisu', sans-serif;
+            width: 700px;
+            margin: 20px auto;
+            text-align: justify;
+            -webkit-text-align: justify;
+            text-align-last: justify;/* ie9*/
+            -webkit-text-align-last: justify;/*chrome 20+*/
+            text-justify: distribute; /* firefox */
+        }
+        .vert {
+            margin: 0 auto;
+            writing-mode: vertical-rl;
+        }
+        p {
+            font-size: x-large;
+            font-family: 'KaiTi', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">母亲节快乐！</h1>
+    <div class="vert" style="width: 90%;">
+        <p>爱子心无尽，</p>
+        <p>归家喜及辰。—— 蒋士铨 《岁暮到家》</p>
+
+        <img src="/image/motherday_flower.svg" alt="flower" style="margin: 0 auto; width: 85%;">
+
+        <p>去年花里逢君别，</p>
+        <p>今日花开已一年。       —— 韦应物 《寄李儋元锡》</p>
+    </div>
+        
+    </div>
+    <script>
+        var widthOffset = 0;//100;document.body.offsetWidth;
+        var elWidth = document.body.offsetWidth;
+        var elHeight = document.body.offsetHeight;
+        random = function random(min, max){
+            return Math.round(min + Math.random()*(max-min)); 
+        };
+        setStyle = function(element, props)
+        {
+            for (var property in props){
+                element.style[property] = props[property] + ((property == 'width' || property == 'height') ? 'px' : '');
+            }
+        };
+        transform = function (el, styles){
+            el.style.webkitTransform = styles;
+            el.style.MozTransform = styles;
+            el.style.msTransform = styles;
+            el.style.OTransform = styles;
+            el.style.transform = styles;
+        };
+        flake = function()
+        {
+            // Flake properties
+            this.x  = random(widthOffset, elWidth - widthOffset);
+            this.y  = random(0, elHeight);
+            this.size = random((20 * 100), (30 * 100)) / 100;
+            this.speed = random(0.5, 2);
+            this.step = 0;
+            this.stepSize = random(1,10) / 100;
+            minSpeed = 1;
+            
+            let flakeObj = null;
+            flakeObj = document.createElement('div');
+            //let text = flakeObj.createElement('p');
+            flakeObj.innerHTML = "<p>❤</p>";
+            setStyle(flakeObj, {'color' : 'red'});
+            
+            flakeObj.className = 'snowfall-flakes';
+            setStyle(flakeObj, {'width' : this.size, 'height' : this.size, 'position' : 'absolute', 'top' : 0, 'left' : 0, 'will-change': 'transform', 'fontSize' : 0, 'zIndex' : 99});
+    
+            //setStyle(flakeObj,{'-moz-box-shadow' : '1px 1px 1px #555', '-webkit-box-shadow' : '1px 1px 1px #555', 'boxShadow' : '1px 1px 1px #555'});
+
+            document.body.appendChild(flakeObj);
+            
+            
+            this.element = flakeObj;
+            
+            this.update = function(){
+                this.y += this.speed;
+
+                if(this.y > elHeight - (this.size  + 6)){
+                    this.reset();
+                }
+
+                transform(this.element, 'translateY('+this.y+'px) translateX('+this.x+'px)');
+
+                this.step += this.stepSize;
+                this.x += Math.cos(this.step);
+                
+                if(this.x + this.size > elWidth - widthOffset || this.x < widthOffset){
+                    this.reset();
+                }
+            },
+            this.reset = function(){
+                this.y = 0;
+                this.x = random(widthOffset, elWidth - widthOffset);
+                this.stepSize = random(1, 10) / 100;
+                this.element.style.width = this.size + 'px';
+                this.element.style.height = this.size + 'px';
+                this.speed = random(1, 5);
+            }
+        },
+        flakes = []
+        for(i = 0; i < 20; i+=1){
+            flakes.push(new flake());
+        }
+        const renderLoop = () => {
+            for(var i = 0; i < flakes.length; i += 1){
+                flakes[i].update();
+            }
+            requestAnimationFrame(renderLoop);
+        };
+        renderLoop();
+    </script>
+</body>
+
+</html>
