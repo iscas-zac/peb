@@ -1,0 +1,53 @@
+两周的材料、教程和工具迭代
+
+记不清最早是哪里看到的 {{ neural-appearance-models "https://research.nvidia.com/labs/rtr/neural_appearance_models/" (graphics 0.7) ("neural network" "https://en.wikipedia.org/wiki/Neural_network" 0.8) (creative 0.5) (20230508) (NVIDIA "https://www.nvidia.com/en-us" 0.8) }}，就不写了，反正后面在 QQ 群也见到了。是个神经网络用于实时渲染纹理的操作，挺厉害，不过应该没时间细看了。
+
+一些 eBPF 相关的资料 {{ ebpf-beginners "https://github.com/lizrice/ebpf-beginners" (eBPF "https://ebpf.io/" 0.9) (review 0.7) (20230509) ("Hacker News" 0.8) (GitHub 0.8) }}，值得看看。
+
+一篇介绍 JIT 的博文 {{ "JIT Compilers 102" "https://redvice.org/2023/template-jits/" (JIT "https://en.wikipedia.org/wiki/Just-in-time_compilation" 0.9) ("Lobsters" 0.8) (20230507) (Rust "https://www.rust-lang.org/" 0.7) }}，倒不一定要细看，不过以后 JIT 总是学一下的好。
+
+看到了一篇介绍 {{ HTMX "https://htmx.org/" (HTML "https://developer.mozilla.org/en-US/docs/Web/HTML" 0.7) }} 的文章 {{ HTMX_is_the_Future "https://quii.dev/HTMX_is_the_Future" (HTMX "https://htmx.org/" 0.8) ("Hacker News" 0.8) (20230507) (REST "http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm" 0.6) (review 0.7) }}，感觉文中提到的那些技术还是值得学习一下。
+
+{{ Grasp "https://usegrasp.com/" ("search engine" "https://en.wikipedia.org/wiki/Search_engine" 0.8) ("Hacker News" 0.8) (20230507) }} 的界面和我之前看到的另一个（好像叫 grep）一模一样，区别是额度多了一些，每月 20 次免费搜索。虽然设计思路不错，但是20 次属实少了些，作为主力搜索引擎不够，但搜得少又体现不出作用。还是再观望一下吧。
+
+{{ "DRIVING COMPILERS" "https://fabiensanglard.net/dc/index.php" (compilers 0.8) (review 0.6) (20230506) }} 是一系列介绍编译流水线的文章。不过粗看过实在有些枯燥。
+
+一起学 {{ GAMES106 "https://games-cn.org/forums/forum/games106-forum" (GAMES "https://games-cn.org/gamescoursescollection/" 0.8) (resource 0.8) ("graphics pipeline" "https://en.wikipedia.org/wiki/Graphics_pipeline" 0.9) }} 的一些群友说起来的一门课 {{ "Advanced Image Synthesis" "https://cseweb.ucsd.edu/~tzli/cse272/wi2023/" (graphics 0.8) (ReSTIR "https://cs.dartmouth.edu/~wjarosz/publications/bitterli20spatiotemporal.html" 0.5) (resource 0.8) (20230504) }}，讲得很先进，说不定会看看。我这几天在不务正业学 {{ GAMES }}的 101 和 106。
+
+打开 {{ Telegram "https://telegram.org/" }}，已经有几千条订阅消息了。虽然确实有不少废料，但也有人分享有趣的项目，有不少感觉也可以写到博客里来。
+
+一个介绍 DNS 的视频 {{ learn-dns-10-years "https://jvns.ca/blog/2023/05/08/new-talk-learning-dns-in-10-years/" ("wizard zines" "https://wizardzines.com/zines/dns/" 0.8) ("Hacker News" 0.8) (20230509) (comics 0.7) (DNS "https://en.wikipedia.org/wiki/Domain_Name_System" 0.8) }}，其实我更感兴趣的是它链接的那个漫画站点。
+
+想起来之前看的少数派的一篇文章 {{ non-programmer-Linux "https://sspai.com/post/77854" (sspai "https://sspai.com" 0.8) (Arch 0.8) (Hyprland "https://hyprland.org/" 0.8) (neovim "https://neovim.io/" 0.6) }}。那时候我就感觉作者比我更懂 Linux，而现在我才接触到 {{ Wayland "https://wayland.freedesktop.org/" (Linux "https://www.kernel.org/" 0.8) (GUI "https://en.wikipedia.org/wiki/Graphical_user_interface" 0.6) (protocol "https://en.wikipedia.org/wiki/Protocol" 0.8) }}，还是因为 tty 里输出中文乱码而搜索到了 {{ tty-cn-current "https://zhuanlan.zhihu.com/p/486542400" (cjktty-recap "https://zhuanlan.zhihu.com/p/486655122" 0.7) (zhihu "https://zhihu.com" 0.8) (Wayland 0.5) (TTY "https://en.wikipedia.org/wiki/TTY" 0.7) (20230509) }}，结果乱码问题还没解决。
+
+应该是三星做的在 iPhone 上试用三星手机的网站 {{ try-galaxy "https://trygalaxy.com/" (simulation 0.8) ("Hacker News" 0.8) (Samsung "https://www.samsung.com" 0.8) (iPhone "https://www.apple.com/hk/en/iphone/" 0.6) (20230510) (creative 0.7) }}，做得确实好，很像那么回事，而且甚至做了比较全面的汉化。
+
+学术界比较有意思的一个新闻是 OpenAI 让语言模型解释语言模型的尝试 {{ explain-neurons "https://openai.com/research/language-models-can-explain-neurons-in-language-models" (GPT-4 "https://openai.com/product/gpt-4" 0.8) (creative 0.8) ("Hacker News" 0.8) (20230510) }}。
+
+一个页面接受信息的动态演示 {{ fetch-itself "https://subtls.pages.dev/" (simulation 0.8) (TLS "https://en.wikipedia.org/wiki/Transport_Layer_Security" 0.8) ("Hacker News" 0.8) (20230510) (interactive 0.7) }}，我觉得比 {{ "The Illustrated TLS 1.3 Connection" "https://tls13.xargs.org/" (interactive 0.5) (TLS 0.8) }} 看起来有意思多了。
+
+前端实现 Windows 桌面 {{ win11-svelte "https://github.com/yashash-pugalia/win11-svelte" (Windows "https://www.microsoft.com/en-us/windows" 0.8) (Svelte "https://svelte.dev/" 0.8) ("Hacker News" 0.8) (20230511) (creative 0.3) }}。
+
+这几天试着写一个运行在浏览器里的数据库，搜到了这篇文章 {{ SQLite-WASM "https://blog.kebab-ca.se/chapters/2023-02-12-sqlite-wasm/overview.html" (SQLite "https://sqlite.org/" 0.8) (WebAssembly "https://webassembly.org/" 0.8) (Emacs "https://www.gnu.org/s/emacs" 0.5) (creative 0.4) (20230510) }}。我要做的有点类似，不过因为用的是 Rust，所以没法直接用它的手段。
+
+Hacker News 这几天并没有特别受关注的新闻，最多 upvote 的是两个 1000 多的帖子，包括上面说的 {{ fetch-itself }}。倒是十几个 vote 就算每日热门的小众论坛 Lobsters，前两天出现了一个 200 vote 的帖子 {{ test-encryption "https://lobste.rs/s/iq5viq/testing_new_encrypted_messaging_app_s" (Lobsters 0.9) (privacy 0.8) ("messaging app" 0.7) (20230512) }}。
+
+一个根据绘制过程移动像素的像素动画画布 {{ pixpaint "https://warms.maxbittker.repl.co/" (creative 0.6) ("pixel art" "https://en.wikipedia.org/wiki/Pixel_art" 0.8) ("Hacker News" 0.8) (20230516) (animation 0.6) (interactive 0.7) }}。
+
+### <h2>几篇在线教程</h2>
+
+还没看完 {{ ugit "https://www.leshenko.net/p/ugit/" (Git "https://git-scm.com/" 0.8) ("Hacker News" 0.8) (20230514) (Python "https://www.python.org/" 0.7) (tutorial 0.8) (review 0.8) }}，但是注意到对于我的三个亮点：介绍 Git 符合我的需求；结合 Git 的讲解和呈现方式也让我思考过很久；美观、吸引人、有互动性的界面。
+
+关于 Web Component 的教程 {{ "HTML with superpowers" "https://htmlwithsuperpowers.netlify.app/" (HTML 0.7) ("Web Component" "https://developer.mozilla.org/en-US/docs/Web/API/Web_components" 0.8) (tutorial 0.8) (ruanyf 0.8) (20230512) }}。
+
+手绘风格的机器学习教程 {{ "The Illustrated Machine Learning website" "https://illustrated-machine-learning.github.io/" ("machine learning" "https://en.wikipedia.org/wiki/Machine_learning" 0.8) (tutorial 0.8) (ruanyf 0.8) (20230512) }}，粗看着还有点意思，但是没细看，如果它能覆盖一些前沿知识还能介绍得足够通俗易懂，那就是入门的最佳选择了。
+
+正在看一篇音乐的线上教材 {{ learningmusic "https://learningmusic.ableton.com/" (tutorial 0.8) (music 0.8) (review 0.7) ("Hacker News" 0.8) (20230516) }}，交互性极强，每篇文章短小精悍，而且有中文翻译。问题主要在我，记不住那么多术语。
+
+另一篇教材 {{ makefiletutorial "https://makefiletutorial.com/" (tutorial 0.8) (Makefile "https://www.gnu.org/software/make/manual/make.html" 0.8) ("Hacker News" 0.8) (20230516) }} 是关于 Makefile 的，还没细看。关于 Makefile 我看到的最早的材料是陈皓的“跟我一起写 Makefile” {{how-to-write-makefile "https://seisman.github.io/how-to-write-makefile/index.html"  (tutorial 0.8) (Makefile "https://www.gnu.org/software/make/manual/make.html" 0.8) }}，昨天听闻他的死，还是有些唏嘘的，如果按读一本书就是一个老师的话，看了几章“跟我一起写 Makefile”的我也算是他半个学生。在网上检索的时候顺便看到另一个 Makefile 的教程（应该是教程吧） {{"Modern Make Handbook" "https://makefile.site/" (tutorial 0.6) (Makefile 0.7) (gnu-make "https://www.gnu.org/software/make" 0.8) (20230516) }}。
+
+还有一篇是关于电子学的，名字起得很狂，但没写完也好久没更新，叫 {{ "Ultimate Electronics" "https://ultimateelectronicsbook.com/" (electronics "https://en.wikipedia.org/wiki/Electronics" 0.8) (tutorial 0.8) ("Hacker News" 0.8) (20230516) }}，我应该没时间看了，先存着吧。
+
+一个拿做游戏大作心态做首页 UI 的区块链项目 {{ "Quai Network" "https://qu.ai" (blockchain "https://en.wikipedia.org/wiki/Blockchain" 0.8) (graphics 0.6) (V2EX "https://www.v2ex.com/" 0.8) (creative 0.7) (20230517) }}，不说产品怎么样，这首页还是很体现行动力的。这个网站是在 <a href="https://v2ex.com/t/940640">V2EX 帖子</a>上看到的，同一页还看到了以前上过 Hacker News 的 PTCG CSS 项目 {{ deck-24abcd "https://deck-24abcd.netlify.app/" ("Pokemon Trading Card Game" "https://www.pokemon.com/us/pokemon-tcg" 0.8) (CSS 0.8) (creative 0.8) ("Hacker News" 0.8) (V2EX "https://www.v2ex.com/" 0.8) }}，这些宝可梦卡片做得很闪，比真卡还好看。
+
+同样是在 V2EX 上看到的 {{ "只读链接" "https://readonly.link/" (V2EX "https://www.v2ex.com/" 0.8) (20230518) (Markdown "https://daringfireball.net/projects/markdown/" 0.6) (blog 0.5) (Vue "https://vuejs.org/" 0.7) }}，看起来很有意思，改天试试看。
