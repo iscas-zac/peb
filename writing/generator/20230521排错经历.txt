@@ -16,7 +16,7 @@ Windows 上有很多远程桌面工具，可以通过网络，把桌面投射到
 缺点是更新系统后有可能会失效，需要到 GitHub issues 中寻找相应版本的 .ini 文件更新。虽然原作者不再更新，
 issues 区却十分活跃，几乎就是个小社区，永远有人在那里贴出各种问题的解决方法。
 
-### <img src="./image/RDPWrap-20230521.png" alt="RDP Wrapper 的截图">
+### <img src="./image/RDPWrap-20230521.png" alt="RDP Wrapper 的截图" style="max-width: 100%;">
 
 今天 RDP 又挂了，本打算走过去检查一下，但是想起来昨天安装了 {{ RustDesk "https://rustdesk.com/" ("remote desktop" 0.8) }}，
 于是拿手机试着连一下。RustDesk 我没有设置开机自启，没想到居然连上了。它支持多个平台，但有时候响应非常缓慢，
@@ -34,4 +34,9 @@ issues 区却十分活跃，几乎就是个小社区，永远有人在那里贴�
 我一开始以为是个无害的多余应用扫描，看了几条回复后觉得这个窗口其实是问题的关键。于是在 Windows 安全中心里关掉了这个检查。
 然后 update 就成功了。排错结束。
 
-### <img src="./image/不需要的应用-20230521.png" alt="安全中心截图">
+### <img src="./image/不需要的应用-20230521.png" alt="安全中心截图" style="max-width: 100%;">
+
+今天算是把这些远程桌面挨个拖出来试水了。RustDesk 大概受限于网速，我几乎是不可能用它当主力的。不过上次在 iPhone 上用它的效果还不错，可能是离得近的缘故。
+它支持多端，而且自启，我决定还是像今天一样拿来做救急用。以后如果有功夫捣鼓自建服务器，说不定更有重回主力的一天。ToDesk 稳定性不能保证，
+所以永远只是个可选项。RDP 无缝衔接两台电脑，在可预见的未来里还会是我的首选。
+在网上还搜到了这么个东西 {{"Chrome remote desktop" "https://remotedesktop.google.com/home" ("remote desktop" 0.8) (Chrome 0.6) }}，但是试了下没法安装。
