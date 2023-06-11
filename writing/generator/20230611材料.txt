@@ -1,0 +1,25 @@
+三周多的材料
+
+我不是第一时间看到的 {{ DragGAN "https://vcai.mpi-inf.mpg.de/projects/DragGAN/" ("generative adversarial network" "https://en.wikipedia.org/wiki/Generative_adversarial_network" 0.8) (research 0.8) (creative 0.8) ("digital image processing" "https://en.wikipedia.org/wiki/Digital_image_processing" 0.7) (20230522) }} 的消息，不过这个图像处理模型即使在机器学习模型如雨后春笋的现在也算独特。它是基于好久没有进展的“生成对抗网络”的，而且实现的效果在看到之前完全无法想象——拖拽一张照片中的物体，产生自然的转动或分合。
+
+看上去是个新语言 {{ eyg "https://eyg.run/" ("functional programming" "https://en.wikipedia.org/wiki/Functional_programming" 0.6) (Web "https://en.wikipedia.org/wiki/Web" 0.5) ("structure editor" "https://en.wikipedia.org/wiki/Structure_editor" 0.7) (Lobsters 0.8) (20230523) }}，如果它能轻松地嵌入任意网页的话，我会考虑放一个在网页里玩玩的。
+
+一篇关于内存分配的、有交互、有图片的文章 {{ "SAMWHO-memory allocation" "https://samwho.dev/memory-allocation/" (SAMWHO "https://samwho.dev/" 0.9) ("Hacker News" 0.8) (20230523) ("memory management" "https://en.wikipedia.org/wiki/Memory_management" 0.8) ("visual guide" 0.8) (creative 0.8) }}（讨论文章见 <a href="https://news.ycombinator.com/item?id=36029087">Hacker News</a>），看上去有 {{ "Bartosz Ciechanowski" "https://ciechanow.ski/" ("interactive tutorial" 0.9) (creative 0.8) (blog 0.8) (review 0.7) }} 老师的影子，在篇幅适中这一点上可能还犹有过之（毕竟 B 老师的单篇文章就有六千行 javascript 代码）。B 老师算是交互式科普文章业界的一盏明灯，然而我至今仍然有半数文章没有拜读，令人感叹。之前还看到过 SAMWHO 的文章 {{ "load balancing" "https://samwho.dev/load-balancing/" (SAMWHO "https://samwho.dev/" 0.9) ("visual guide" 0.6) (creative 0.7) ("load balancing" "https://en.wikipedia.org/wiki/Load_balancing_(computing)" 0.8) }}。他在 Hacker News 评论区里还提及了 {{ "Julia Evans" "https://jvns.ca/" (blog 0.8) (review 0.7) }} 的博客网站，改天应该看一下。除此以外，他在评论区提到的 {{"song repetition" "https://pudding.cool/2017/05/song-repetition/" ("visual guide" 0.8) (creative 0.7) ("Hacker News" 0.8) (20230523) }} 的科普风格也很优雅（只是以我现在的前端水平……）。
+
+之前读到 Fn 和 move 的关系 {{ "move and Fn - course.rs" "https://course.rs/advance/functional-programing/closure.html#move-%E5%92%8C-fn" ("Rust语言圣经" "https://course.rs" 0.9) (closure "https://en.wikipedia.org/wiki/Closure_(computer_programming)" 0.8) }} 的时候就一直搞不明白为什么 FnOnce 和 move 不意味着同一件事，读到 {{ "A guide to closures in Rust" "https://hashrust.com/blog/a-guide-to-closures-in-rust/" (Rust 0.8) ("Hacker News" 0.8) (20230524) }} 时这个噩梦又回来了。我回去看 Rust 语言圣经，然后看到讨论区，然后又怀疑人生。这本教程的好处在于，评论区里永远能看到超越想象的语言用法，让人明白自己从来没有看懂过语法……
+
+在 QQ 群里看到的小游戏 {{ slide-game "https://cs.uwaterloo.ca/~csk/slide" (game 0.8) (creative 0.8) (20230527) }}，其实 HN 上也发布了，但是没什么回应。有个数学群几乎全是游戏心得。这个游戏需要同时按住并滑动多个滑块，轨道分层次，一不小心就会把手指绞在一起。
+
+{{ markwhen "https://github.com/mark-when/markwhen" (Markdown 0.7) }} 可能是个记录时间线的文件格式，类似 markdown。是看了作者在 HN 上发布的二维码生成器才看到这个的。
+
+居然有人用写 GUI 教汇编 {{ "asm-GUI" "https://gaultier.github.io/blog/x11_x64.html" (graphics 0.6) (assembly "https://en.wikipedia.org/wiki/Assembly_language" 0.7) ("X Window" "https://en.wikipedia.org/wiki/X_Window_System" 0.7) ("Hacker News" 0.8) (20230602) }}。
+
+{{ "Blink" "https://github.com/jart/blink/releases/tag/1.0.0" ("virtual machine" "https://en.wikipedia.org/wiki/Virtual_machine" 0.8) ("program optimization" "https://en.wikipedia.org/wiki/Program_optimization" 0.7) ("jart" "https://justine.lol/" 0.8) (Lobster 0.8) (20230605) }} 是一个小且快的虚拟机，它……算了，我也不懂，总之 Justine 牛逼！
+
+哦我的天哪，{{ DreamBerd "https://github.com/TodePond/DreamBerd" ("creative" 0.8) (esolang  "https://en.wikipedia.org/wiki/Esoteric_programming_language" 0.8) (joke 0.6) ("Hacker News" 0.8) (20230605) }} 真是一门完美的语言，我甚至非常需要“获取该变量的前一个值”这样的功能，只可惜该语言标准超越了贫瘠的编译器能描述的范畴，没法加入我谦卑的工作流了。
+
+有人用 Stable Diffusion 把二维码重新绘制 {{ "stable diffusion QR" "https://arstechnica.com/information-technology/2023/06/redditor-creates-working-anime-qr-codes-using-stable-diffusion/" ("stable diffusion" "https://github.com/CompVis/stable-diffusion" 0.7) ("QR code" "https://en.wikipedia.org/wiki/QR_code" 0.8) (creative 0.7) ("Hacker News" 0.8) (20230607) }}，这下除了三个角以外一点也看不出是个二维码了。
+
+似乎 Rust 的汇编码有许多独到之处 {{ "Rust to Assembly" "https://eventhelix.com/rust/" (Rust 0.8) (assembly 0.8) ("Hacker News" 0.8) }} 但我没认真看。以后再说吧。
+
+近段时间材料并不多，但是越不更新，我就越懒得更新。所以还是传一些再说吧。
