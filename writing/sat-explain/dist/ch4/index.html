@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Astro description">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" crossorigin="anonymous">
+    <meta name="generator" content="Astro v2.8.3">
+    <title>Part 4 - DPLL, CDCL and DPLL(T)</title>
+  <link rel="stylesheet" href="/sat-explain/_astro/hoisted.3cced9c6.css" />
+<link rel="stylesheet" href="/sat-explain/_astro/ch1.89928727.css" />
+<link rel="stylesheet" href="/sat-explain/_astro/ap1.a235353a.css" />
+<link rel="stylesheet" href="/sat-explain/_astro/afterwords.393e4cb9.css" /><script type="module" src="/sat-explain/_astro/hoisted.541a558d.js"></script></head>
+  <body>
+    <div class="header astro-3EF6KSR2">
+  <h1 class="header__title astro-3EF6KSR2">Part 4 - DPLL, CDCL and DPLL(T)</h1>
+  <div class="div-container astro-X4W2OOKT" style="display: flex;">
+  <div class="A astro-X4W2OOKT" style="background: rgba(128, 255, 0, 0.29);"></div><div class="A astro-X4W2OOKT" style="background: rgba(255, 0, 102, 0.75);"></div><div class="A astro-X4W2OOKT" style="background: rgba(51, 204, 255, 0.94);"></div><div class="A astro-X4W2OOKT" style="background: rgba(153, 102, 0, 0.49);"></div><div class="C astro-X4W2OOKT" style="background: rgba(255, 102, 255, 0.12);"></div><div class="C astro-X4W2OOKT" style="background: rgba(0, 51, 153, 0.86);"></div><div class="C astro-X4W2OOKT" style="background: rgba(102, 0, 51, 0.05);"></div><div class="C astro-X4W2OOKT" style="background: rgba(0, 153, 0, 0.41);"></div><div class="C astro-X4W2OOKT" style="background: rgba(204, 51, 153, 0.66);"></div><div class="C astro-X4W2OOKT" style="background: rgba(255, 128, 0, 0.93);"></div>
+</div>
+<div class="tri-container astro-X4W2OOKT">
+  <div class="triangle astro-X4W2OOKT"></div>
+  <div class="triangle astro-X4W2OOKT"></div>
+  <div class="triangle astro-X4W2OOKT"></div>
+</div>
+  <div style="flex: 0 0 30%;" class="astro-3EF6KSR2"></div>
+  <select id="mode" autocomplete="off" required>
+  <option value="plain" selected>plain</option>
+  <option value="formal">formula</option>
+  <option value="code">code</option>
+  <option value="voice">voice</option>
+  <option value="history">history</option>
+  <option value="TODO">⚠️DEVELOPER MODE⚠️</option>
+</select>
+
+
+
+<script>
+  const selectElement = document.getElementById("mode");
+  console.log(selectElement);
+  const visibility_update = function () {
+    for (const label of [
+      "plain",
+      "formal",
+      "code",
+      "voice",
+      "history",
+      "TODO",
+    ]) {
+      for (const elem of document.getElementsByClassName(label)) {
+        elem.classList.add("invisible");
+      }
+    }
+
+    for (const elem of document.getElementsByClassName(selectElement.value)) {
+      elem.classList.remove("invisible");
+    }
+  };
+  selectElement.addEventListener("change", visibility_update);
+  document.addEventListener("DOMContentLoaded", visibility_update);
+</script>
+  <nav class="header__nav astro-3EF6KSR2">
+    <span class="header__nav-item astro-3EF6KSR2"><a href="/overall" class="astro-3EF6KSR2">
+      <svg viewBox="0 0 24 24" width="32" height="32" style="filter: invert(1);" class="astro-3EF6KSR2">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" class="astro-3EF6KSR2"></path>
+      </svg>
+    </a></span>
+    <span class="header__nav-item astro-3EF6KSR2"><a href="https://github.com/iscas-zac/sat-explain" class="astro-3EF6KSR2">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="32" height="32" alt="GitHub" style="
+        filter: invert(1);  
+      " class="astro-3EF6KSR2">
+    </a></span>
+  </nav>
+</div>
+    <div style="
+      margin: 0 auto;
+      width: 100%;
+      max-width: 100ch;
+      padding: 1rem;
+      line-height: 1.5;">
+      <blockquote>
+<p>I wrote more than three hundred computer programs while preparing this
+material, because I find that I don’t understand things unless I try to program
+them. - Don Knuth, in <em>The Art of Computer Programming, Volume 4 Fascicle 6, Satisfiability</em></p>
+</blockquote>
+<div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>adjust the quote format</p></div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>We have seen the computer’s way to express a propositional
+logic problem as a space of possibilities. It then searches in the space,
+enumerating as many as possible.</p><p>However, we haven’t mentioned the exact searching method other than brutal force yet.
+Instead of visiting all possible combination of truth values, we can identify
+a family of unsatisfactory solutions.</p><p>As we know, every clause has a few concerned variables.</p>
+  
+  
+</div>
+  <img src="/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  
+  <img src="/sat-explain/student2.png" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
+  
+    <p>It’s like that every
+traffic rule only cares about a certain part of one’s driving style.</p><p>Although we need to satisfy every rule to drive safely, we only need to adjust the
+relative location of the safety belt and our body to make ‘safety belt rule’
+happy.</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>Exactly. If the belt is loosened, the traffic police will be unhappy
+no matter how we use the headlights.</p><p>The same is the clauses. If a clause evaluates to false, we cannot make
+the whole formula satisfy without adjusting the variables which it cares about.
+Thus, we can discard a lot of assignments by simply looking at a few
+variable truth values in them.</p><p>When we assign all variables in a clause to some value and make it
+unsatisfied, we consider it as a <strong>conflict</strong>, and try to recover to
+a previous state.</p>
+  
+  
+</div>
+  <img src="/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  <img src="/sat-explain/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  
+    <p>Wait… Assign? In a search over truth combinations, we always have
+all values assigned and simply flip some to get to a new combination!</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -5deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>You are right. This time, we are still conducting a search, but in the
+space of partial assignment. That is, we start with no variable assigned
+(or make them assigned to ‘unknown’), and proceed by assigning a value
+to some variable.</p><p>The DPLL algorithm, roughly speaking, is a sequence of assignments.
+Every assignment is decided by either reasoning or attempting. If an
+assignment leads to a conflict, the last attempt is re-considered.</p>
+  
+  
+</div>
+  <img src="/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  
+  <img src="/sat-explain/student2.png" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
+  
+    <p>Is this reasoning the same as we’ve talked before, when we decide a
+statement is right according to some previous knowledge?</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -5deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>It’s a bit close. We have talked about unit propagation to get a result
+statement, and this time we use unit propagation to get some assignments.
+When a clause contains only one variable, it is assigned to satisfy the
+clause.</p>
+  
+  
+</div>
+  <img src="/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  <img src="/sat-explain/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  
+    <p>This time let me give an example! Umm… It’s like the school rule, when
+Mistress shouts at us, “Don’t talk!” And the headmaster says, “Don’t talk or get
+out of the school!”</p><p>Mistress’s instruction contains one variable. We satisfy her requirements,
+and the headmaster’s instruction is then satisfied automatically.</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 2deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>Oh, what an example! You are right anyway, but don’t let your teacher get
+mad at you again!</p><p>The really tricky part in DPLL is how to make an attempt. The way of choosing
+a variable, assigning it</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>write about DPLL and CDCL, quote <a href="https://cse442-17f.github.io/Conflict-Driven-Clause-Learning/">https://cse442-17f.github.io/Conflict-Driven-Clause-Learning/</a>.</p></div>
+  
+  
+</div>
+  <img src="/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+<div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>finish the Snippet</p><div id="code-editor" style="width: 800px; height: 600px; border: 1px solid grey">
+</div></div>
+<div style="font-size: larger; margin: 20px;"><p>Congratulations! You’ve finish this tutorial.</p></div>
+<div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b>
+  make links more stylish
+</div>
+
+<div>
+      <a class="pale" id="ref-1" href="/sat-explain/afterwords">
+        finish
+      </a>
+    </div>
+    </div>
+  </body></html>
