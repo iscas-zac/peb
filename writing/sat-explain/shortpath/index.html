@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Astro description">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" crossorigin="anonymous">
+    <meta name="generator" content="Astro v2.8.3">
+    <title>Cheatsheet</title>
+  <link rel="stylesheet" href="/sat-explain/_astro/ap1.7eaff66e.css" />
+<link rel="stylesheet" href="/sat-explain/_astro/ap1.a235353a.css" />
+<link rel="stylesheet" href="/sat-explain/_astro/afterwords.393e4cb9.css" /></head>
+  <body>
+    <div class="header astro-3EF6KSR2">
+  <h1 class="header__title astro-3EF6KSR2">Cheatsheet</h1>
+  <div class="div-container astro-X4W2OOKT" style="display: flex;">
+  <div class="B astro-X4W2OOKT" style="background: rgba(128, 255, 0, 0.29);"></div><div class="A astro-X4W2OOKT" style="background: rgba(255, 0, 102, 0.75);"></div><div class="C astro-X4W2OOKT" style="background: rgba(51, 204, 255, 0.94);"></div><div class="C astro-X4W2OOKT" style="background: rgba(153, 102, 0, 0.49);"></div><div class="C astro-X4W2OOKT" style="background: rgba(255, 102, 255, 0.12);"></div><div class="C astro-X4W2OOKT" style="background: rgba(0, 51, 153, 0.86);"></div><div class="C astro-X4W2OOKT" style="background: rgba(102, 0, 51, 0.05);"></div><div class="C astro-X4W2OOKT" style="background: rgba(0, 153, 0, 0.41);"></div><div class="C astro-X4W2OOKT" style="background: rgba(204, 51, 153, 0.66);"></div><div class="C astro-X4W2OOKT" style="background: rgba(255, 128, 0, 0.93);"></div>
+</div>
+<div class="tri-container astro-X4W2OOKT">
+  <div class="triangle astro-X4W2OOKT"></div>
+  <div class="triangle astro-X4W2OOKT"></div>
+  <div class="triangle astro-X4W2OOKT"></div>
+</div>
+  <div style="flex: 0 0 30%;" class="astro-3EF6KSR2"></div>
+  <select id="mode" autocomplete="off" required>
+  <option value="plain" selected>plain</option>
+  <option value="formal">formula</option>
+  <option value="code">code</option>
+  <option value="voice">voice</option>
+  <option value="history">history</option>
+  <option value="TODO">⚠️DEVELOPER MODE⚠️</option>
+</select>
+
+
+
+<script>
+  const selectElement = document.getElementById("mode");
+  console.log(selectElement);
+  const visibility_update = function () {
+    for (const label of [
+      "plain",
+      "formal",
+      "code",
+      "voice",
+      "history",
+      "TODO",
+    ]) {
+      for (const elem of document.getElementsByClassName(label)) {
+        elem.classList.add("invisible");
+      }
+    }
+
+    for (const elem of document.getElementsByClassName(selectElement.value)) {
+      elem.classList.remove("invisible");
+    }
+  };
+  selectElement.addEventListener("change", visibility_update);
+  document.addEventListener("DOMContentLoaded", visibility_update);
+</script>
+  <nav class="header__nav astro-3EF6KSR2">
+    <span class="header__nav-item astro-3EF6KSR2"><a href="/overall" class="astro-3EF6KSR2">
+      <svg viewBox="0 0 24 24" width="32" height="32" style="filter: invert(1);" class="astro-3EF6KSR2">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" class="astro-3EF6KSR2"></path>
+      </svg>
+    </a></span>
+    <span class="header__nav-item astro-3EF6KSR2"><a href="https://github.com/iscas-zac/sat-explain" class="astro-3EF6KSR2">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="32" height="32" alt="GitHub" style="
+        filter: invert(1);  
+      " class="astro-3EF6KSR2">
+    </a></span>
+  </nav>
+</div>
+    <div style="
+      margin: 0 auto;
+      width: 100%;
+      max-width: 100ch;
+      padding: 1rem;
+      line-height: 1.5;">
+      <dialog class="astro-IXW4XEFC">
+  <b style="font-size: larger; line-height: 50px;" class="astro-IXW4XEFC">Experimental feature: story-based learning?</b>
+  <form name="quiz" class="astro-IXW4XEFC">
+    
+  </form>
+  
+  <div class="astro-IXW4XEFC"><a class="pale astro-IXW4XEFC" id="ref-1" href="#">
+          I&#39;d like some concepts.
+        </a></div><div class="astro-IXW4XEFC"><a class="pale astro-IXW4XEFC" id="ref-2" href="/shortpath-story">
+          I&#39;d read a story!
+        </a></div>
+  <script>
+    const dialog = document.querySelector("dialog");
+    dialog?.showModal();
+
+    const links = document.querySelectorAll('a[href="#"]');
+    links.forEach((element) => {
+      element.addEventListener("click", function () {
+        dialog?.close();
+      });
+    });
+
+    function submit() {
+      const radios = document.getElementsByName("answer");
+      const value = Array.from(radios).find((radio) => radio.checked).value;
+
+      const ref_to_highlight = document.getElementById("ref-" + value);
+      ref_to_highlight.classList.add("highlight");
+      ref_to_highlight.classList.remove("pale");
+    }
+  </script>
+
+  
+</dialog>
+<ol>
+<li>
+<p>We all know equations with unknown variables on real number domain are studied a lot.
+And <strong>yes-or-no variables can also form equations</strong>.
+We call that Boolean algebra.<span class="formal"></span></p>
+</li>
+<li>
+<p><strong>Propositional logic deals with formulas</strong>, in which
+everything is abstracted as a Boolean variable. A formula consists
+of variables and is true or false according to the truth values of variables.
+<span class="formal">A formula is actually recursively defined.</span></p>
+</li>
+<li>
+<p>In Boolean Satisfiabilty Problem (<strong>SAT</strong>), we try find a set of values that
+are either true or false to make the formula true.</p>
+</li>
+<li>
+<p>SAT is a family of problems that are pervasive in the real world. For example,
+the input and output of logic gate circuits are perfectly described by Boolean formulas.</p>
+</li>
+<li>
+<p>We use <strong>operators</strong> in logic formula to form CNF. Some well-known operators
+are “and”<span class="formal"> (<span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\wedge</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5556em"></span><span class="mord">∧</span></span></span></span></span>)</span>, “or”<span class="formal"> (<span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\wedge</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5556em"></span><span class="mord">∧</span></span></span></span></span>)</span>,
+and “not”<span class="formal"> (<span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">¬</mi></mrow><annotation encoding="application/x-tex">\neg</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em"></span><span class="mord">¬</span></span></span></span></span>)</span>. <span class="formal">operators
+are simply a mapping from any numbers of Boolean values to a Boolean value(
+<span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">o</mi><mi mathvariant="normal">p</mi></mrow><mo>:</mo><mo stretchy="false">{</mo><mrow><mi mathvariant="bold">t</mi><mi mathvariant="bold">r</mi><mi mathvariant="bold">u</mi><mi mathvariant="bold">e</mi></mrow><mo separator="true">,</mo><mrow><mi mathvariant="bold">f</mi><mi mathvariant="bold">a</mi><mi mathvariant="bold">l</mi><mi mathvariant="bold">s</mi><mi mathvariant="bold">e</mi></mrow><msup><mo stretchy="false">}</mo><mi>n</mi></msup><mo>↦</mo><mo stretchy="false">{</mo><mrow><mi mathvariant="bold">t</mi><mi mathvariant="bold">r</mi><mi mathvariant="bold">u</mi><mi mathvariant="bold">e</mi></mrow><mo separator="true">,</mo><mrow><mi mathvariant="bold">f</mi><mi mathvariant="bold">a</mi><mi mathvariant="bold">l</mi><mi mathvariant="bold">s</mi><mi mathvariant="bold">e</mi></mrow><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\mathrm{op}: \{ \mathbf{true}, \mathbf{false} \}^n \mapsto \{ \mathbf{true}, \mathbf{false} \}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em"></span><span class="mord"><span class="mord mathrm">op</span></span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mopen">{</span><span class="mord"><span class="mord mathbf">true</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord"><span class="mord mathbf">false</span></span><span class="mclose"><span class="mclose">}</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em"></span><span class="mrel">↦</span><span class="mspace" style="margin-right:0.2778em"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mopen">{</span><span class="mord"><span class="mord mathbf">true</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord"><span class="mord mathbf">false</span></span><span class="mclose">}</span></span></span></span></span>).</span></p>
+</li>
+<li>
+<p>SAT is <strong>hard</strong> to solve. Or strictly, SAT solving is <strong>hard to scale</strong>. For example,
+for 30 variables, there are <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>30</mn></msup></mrow><annotation encoding="application/x-tex">2^{30}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">30</span></span></span></span></span></span></span></span></span></span></span></span></span> combinations of values, and for 31 variables
+there are <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>31</mn></msup></mrow><annotation encoding="application/x-tex">2^{31}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em"><span style="top:-3.063em;margin-right:0.05em"><span class="pstrut" style="height:2.7em"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">31</span></span></span></span></span></span></span></span></span></span></span></span></span>. Add a variable and see a double in run time to find the answer.</p>
+</li>
+<li>
+<p>We have rules and can <strong>syntactically reason</strong> with formulas. For example, for
+variables A, B, if A and B is true, then A is true and B is true.</p>
+</li>
+<li>
+<p>We can <strong>semantically enumerate</strong> the possibilities of combinations and <strong>search</strong> for the
+valid solution.</p>
+</li>
+<li>
+<p>Search can be guided to be efficient. A search process is an iteration.
+We can find a better solution from the current solution.</p>
+</li>
+</ol>
+<div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>better phrase, and formal parts</p></div>
+<ol start="10">
+<li>Typically, a DPLL or CDCL algorithm is used for computers to solve
+a SAT problem, with the best of both worlds. It adopts some reasoning methods
+to rule out bad solutions, and searches among the “good-looking” ones.</li>
+</ol>
+<div style="font-size: larger; margin: 20px;"><p>This should give you a rough idea on how scientists work. But our Internet-based
+searching is so powerful, that everyone can teach themselves a lot by
+simply typing some letters in that browser bar.</p><p>Therefore, I collect some keywords so that you can look for it yourself.
+Go for it or go to the final page to end this journey.</p></div>
+<div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b>
+  make links more stylish
+</div>
+
+<div>
+      <a class="pale" id="ref-1" href="/afterwords">
+        I&#39;ve read enough.
+      </a>
+    </div><div>
+      <a class="pale" id="ref-2" href="/shortpath-appendix">
+        Give me keywords.
+      </a>
+    </div>
+    </div>
+  </body></html>

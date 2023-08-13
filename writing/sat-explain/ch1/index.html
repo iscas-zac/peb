@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Astro description">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" crossorigin="anonymous">
+    <meta name="generator" content="Astro v2.8.3">
+    <title>Part 1 - basic concepts</title>
+  <link rel="stylesheet" href="/sat-explain/_astro/ch1.89928727.css" />
+<link rel="stylesheet" href="/sat-explain/_astro/ap1.7eaff66e.css" />
+<link rel="stylesheet" href="/sat-explain/_astro/ap1.a235353a.css" />
+<link rel="stylesheet" href="/sat-explain/_astro/ch1.a1953195.css" />
+<link rel="stylesheet" href="/sat-explain/_astro/afterwords.393e4cb9.css" /></head>
+  <body>
+    <div class="header astro-3EF6KSR2">
+  <h1 class="header__title astro-3EF6KSR2">Part 1 - basic concepts</h1>
+  <div class="div-container astro-X4W2OOKT" style="display: flex;">
+  <div class="A astro-X4W2OOKT" style="background: rgba(128, 255, 0, 0.29);"></div><div class="C astro-X4W2OOKT" style="background: rgba(255, 0, 102, 0.75);"></div><div class="C astro-X4W2OOKT" style="background: rgba(51, 204, 255, 0.94);"></div><div class="C astro-X4W2OOKT" style="background: rgba(153, 102, 0, 0.49);"></div><div class="C astro-X4W2OOKT" style="background: rgba(255, 102, 255, 0.12);"></div><div class="C astro-X4W2OOKT" style="background: rgba(0, 51, 153, 0.86);"></div><div class="C astro-X4W2OOKT" style="background: rgba(102, 0, 51, 0.05);"></div><div class="C astro-X4W2OOKT" style="background: rgba(0, 153, 0, 0.41);"></div><div class="C astro-X4W2OOKT" style="background: rgba(204, 51, 153, 0.66);"></div><div class="C astro-X4W2OOKT" style="background: rgba(255, 128, 0, 0.93);"></div>
+</div>
+<div class="tri-container astro-X4W2OOKT">
+  <div class="triangle astro-X4W2OOKT"></div>
+  <div class="triangle astro-X4W2OOKT"></div>
+  <div class="triangle astro-X4W2OOKT"></div>
+</div>
+  <div style="flex: 0 0 30%;" class="astro-3EF6KSR2"></div>
+  <select id="mode" autocomplete="off" required>
+  <option value="plain" selected>plain</option>
+  <option value="formal">formula</option>
+  <option value="code">code</option>
+  <option value="voice">voice</option>
+  <option value="history">history</option>
+  <option value="TODO">⚠️DEVELOPER MODE⚠️</option>
+</select>
+
+
+
+<script>
+  const selectElement = document.getElementById("mode");
+  console.log(selectElement);
+  const visibility_update = function () {
+    for (const label of [
+      "plain",
+      "formal",
+      "code",
+      "voice",
+      "history",
+      "TODO",
+    ]) {
+      for (const elem of document.getElementsByClassName(label)) {
+        elem.classList.add("invisible");
+      }
+    }
+
+    for (const elem of document.getElementsByClassName(selectElement.value)) {
+      elem.classList.remove("invisible");
+    }
+  };
+  selectElement.addEventListener("change", visibility_update);
+  document.addEventListener("DOMContentLoaded", visibility_update);
+</script>
+  <nav class="header__nav astro-3EF6KSR2">
+    <span class="header__nav-item astro-3EF6KSR2"><a href="/overall" class="astro-3EF6KSR2">
+      <svg viewBox="0 0 24 24" width="32" height="32" style="filter: invert(1);" class="astro-3EF6KSR2">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" class="astro-3EF6KSR2"></path>
+      </svg>
+    </a></span>
+    <span class="header__nav-item astro-3EF6KSR2"><a href="https://github.com/iscas-zac/sat-explain" class="astro-3EF6KSR2">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="32" height="32" alt="GitHub" style="
+        filter: invert(1);  
+      " class="astro-3EF6KSR2">
+    </a></span>
+  </nav>
+</div>
+    <div style="
+      margin: 0 auto;
+      width: 100%;
+      max-width: 100ch;
+      padding: 1rem;
+      line-height: 1.5;">
+      <dialog class="astro-IXW4XEFC">
+  <b style="font-size: larger; line-height: 50px;" class="astro-IXW4XEFC">What is the difference between syntactic and semantic concepts in logic?</b>
+  <form name="quiz" class="astro-IXW4XEFC">
+    <div class="astro-IXW4XEFC">
+          <input type="radio" name="answer" value="1" class="astro-IXW4XEFC">
+          <label class="astro-IXW4XEFC">A syntactic concept means something one wants to convey by a statement, while a semantic one means something it actually conveys.</label>
+        </div><div class="astro-IXW4XEFC">
+          <input type="radio" name="answer" value="2" class="astro-IXW4XEFC">
+          <label class="astro-IXW4XEFC">A syntactic concept means something to be deduced, while a semantic one means something to be verified.</label>
+        </div><div class="astro-IXW4XEFC">
+          <input type="radio" name="answer" value="1" class="astro-IXW4XEFC">
+          <label class="astro-IXW4XEFC">A syntactic concept means something true by default, while a semantic one means something to be proved.</label>
+        </div><div class="astro-IXW4XEFC">
+          <input type="radio" name="answer" value="1" class="astro-IXW4XEFC">
+          <label class="astro-IXW4XEFC">I want to learn more about it.</label>
+        </div>
+  </form>
+  <button style="font-size: larger;" onclick="
+    submit()
+    " class="astro-IXW4XEFC">confirm</button>
+  <div class="astro-IXW4XEFC"><a class="pale astro-IXW4XEFC" id="ref-1" href="#">
+          I&#39;d read through this chapter
+        </a></div><div class="astro-IXW4XEFC"><a class="pale astro-IXW4XEFC" id="ref-2" href="/ch2">
+          I&#39;d skip to next chapter
+        </a></div>
+  <script>
+    const dialog = document.querySelector("dialog");
+    dialog?.showModal();
+
+    const links = document.querySelectorAll('a[href="#"]');
+    links.forEach((element) => {
+      element.addEventListener("click", function () {
+        dialog?.close();
+      });
+    });
+
+    function submit() {
+      const radios = document.getElementsByName("answer");
+      const value = Array.from(radios).find((radio) => radio.checked).value;
+
+      const ref_to_highlight = document.getElementById("ref-" + value);
+      ref_to_highlight.classList.add("highlight");
+      ref_to_highlight.classList.remove("pale");
+    }
+  </script>
+
+  
+</dialog>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>Time to start, <b><strong>bold</strong></b> truth-seekers! Today we are going to face a logical problem.
+Before that, have a look at this classic riddle:</p><p>Three kids are accused of breaking a window. Their statements are either true or false. Only one is telling a lie.</p><ul>
+<li>🐶 said, <span id="stmt1" onClick="
+var stmt1 = document.getElementById('stmt1');
+var stmt2 = document.getElementById('stmt2');
+var stmt3 = document.getElementById('stmt3');
+function click() {
+stmt1.classList.remove('red-borders');
+stmt2.classList.add('red-borders');
+stmt3.classList.add('red-borders');
+};
+click()">”😼 is telling a lie.”</span></li>
+<li>😼 said, <span id="stmt2" onClick="
+var stmt1 = document.getElementById('stmt1');
+var stmt2 = document.getElementById('stmt2');
+var stmt3 = document.getElementById('stmt3');
+function click() {
+stmt1.classList.remove('red-borders');
+stmt2.classList.remove('red-borders');
+stmt3.classList.remove('red-borders');
+};
+click()">”🐰 broke the window.”</span></li>
+<li>🐰 yelled, <span id="stmt3" onClick="
+var stmt1 = document.getElementById('stmt1');
+var stmt2 = document.getElementById('stmt2');
+var stmt3 = document.getElementById('stmt3');
+function click() {
+stmt1.classList.add('red-borders');
+stmt2.classList.add('red-borders');
+stmt3.classList.remove('red-borders');
+};
+click()">“I didn’t!”</span></li>
+</ul><style>.red-borders { border: 1px solid red;}</style><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>make the lines structural</p></div><p>Who’s going to tell me, which one is telling a lie?
+<i style="font-family: Arial, Helvetica, sans-serif;">(click
+each sentence see the contradictions if it is a lie.)</i></p>
+  
+  
+</div>
+  <img src="/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  <img src="/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -5deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  
+    <p>I might have seen this puzzle before. Let’s assume if 🐰 is telling a lie,
+and what 🐶 said shows that 😼 is telling a lie. A contradiction!</p><p>Well, let’s move on: if 🐶 is telling a lie, then 😼 claims 🐰 broke the window while
+🐰 denies, another contradiction!</p><p>…</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>make a table or something</p></div>
+  
+  
+</div>
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  
+  <img src="/student2.png" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -4deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
+  
+    <p>Hey, move aside! I have found a secret. The statements of 🐶 and 😼
+always contradicts, and at most one of them is true!</p><p>The same is for 😼 and 🐰. As a result, there is a lier between 🐶
+and 😼, as well as between 😼 and 🐰. As we know there is at most
+1 lier among the three, 😼 is the lier!</p>
+  
+  
+</div>
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  <img src="/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  
+    <p>… If 😼 is telling a lie, then 🐶 is right, and 🐰 didn’t broke the window.</p><p>I have just finish my enumeration, and I agree that’s correct.</p>
+  
+  
+</div>
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  
+  
+  <img src="/student-unknown.png" alt="a mysterious person under a fancy cloak, slightly looking to the right, simple lineart, parchment, comic style, sketch" class="astro-6736KINT">
+  <div contenteditable="true" class="astro-MHFLLGJW" style="--randomRotation: -4deg;--color: rgb(122, 159, 97);--font: Indie Flower;">
+  
+    <p>\ \ Whoa, I found a empty note? I can even write something here!  %<span class="math math-inline"><span class="katex-error" title="ParseError: KaTeX parse error: Double superscript at position 3: ^(^̲" style="color:#cc0000">^(^</span></span>^^(&amp;$@#!))</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>Good, you have found two different ways to solve the problem.
+However, we still need to look at it from a more formal perspective.</p><p>Let’s check your problem solving skills, which draw the same conclusion at last.
+However, they are intricately different.</p><p>One checks all possible solutions, and filters out the unqualified;
+the other grows from solid assumptions, and everything it derives is qualified
+by nature. We call this <em>reasoning</em>.</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>highlight with color, emoji and even styles</p></div><p>The reasoning process has some key elements, for example, axioms.
+Every reasoning process must have a beginning.</p><p>And syntax, deduction, or rules, whatever you like. Like a detective, we draw a conclusion
+from the ‘axioms’.</p><p>And of course there is always a conclusion to be proved.</p>
+  
+  
+</div>
+  <img src="/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  
+  <img src="/student2.png" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -4deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
+  
+    <p>This is where syntax comes in? So syntax is a way to rule out invalid
+things.</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -5deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>Exactly, and we usually call a statement <em>consistent</em>, if no contradiction
+can be reasoned from it. This is a way to rule out incorrect guesses.</p><p>However, just like a detective solving a case, there are occasions when reasoning
+fails. When faced with similar puzzles, we human usually identify the reasoning rules,
+and try to deduce with them. If no more information can be deduced, we turn to the
+last method, enumerating possible solutions and seek <em>truths</em>.</p><p>We consider this a semantic process, and the truths are said to be <em>satisfying</em>.</p>
+  
+  
+</div>
+  <img src="/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  <img src="/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  
+    <p>So a semantic concept is always linked to the world or the basic facts.</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>The puzzle has three statements, each of which is either true or false.
+Everything is a yes-or-no question, that is exactly how <em>propositional logic</em> sees the world.</p><p>We’ll talk more about propositional logic later. In fact, our discussion is all about
+propositions if not otherwise mentioned.</p><p>Before we move on, let’s grab some syntactic and semantic concepts. We would say
+in the reasoning process, some conclusion is <strong>valid</strong> given a set of conditions,
+that is, by reasoning, we can reach the conclusion, just like math proof questions
+in your middle school tests.</p><p>Now, who can give me a semantic version of validity?</p>
+  
+  
+</div>
+  <img src="/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  <img src="/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -4deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  
+    <p>Easy. By enumerating every statement’s “trueness”, a conclusion statement is always true
+if the known conditions are all true!</p><p>Wait, does that mean, I can say “2 + 2 = 5” is valid and “semantically valid”,
+given the condition “1 + 1 = 3”? Nothing in the enumeration makes the
+condition true, and they don’t need to make the conclusion true then.</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -3deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>Yep, despite that your sentence is an arithmetic statement and beyond our propositional logic.
+It is sometimes stated as “anything can be derived from a contradiction”.
+By the way, the “semantical validity” is referred to as “derivability” here,
+to avoid confusion with the “validity” of the statement.</p>
+  
+  
+</div>
+  <img src="/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  <img src="/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  
+    <p>I got it. Let me explain the semantic consistency!</p><p>As stated before, the semantic consistency of a group of statements are
+actually about finding a set of values in the world to make every statement
+satisfy.</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>Yes. The semantic consistency is also called satisfiability,</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>explain what SAT means</p></div><p>and we are going to dig deep in that finding process later.</p>
+  
+  
+</div>
+  <img src="/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  
+  <img src="/student2.png" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -5deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
+  
+    <p>And finally, syntactic consistency! Like what satisfiability is to derivability,
+it’s also about finding a way to reason from some statement to some others!</p><p>Wait, that doesn’t make sense. Anything can be derived from a contradiction,
+and I remember that consistency means no contradiction can be deduced.</p><p>Can I make sure every statement derived is not a contradiction? That should suffice.</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -4deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>Sorry, there are usually infinite derivations from a propositional logic thing.
+That is, a set of statements are inconsistent if contradiction can be deduced.
+However, nothing tells you if they are consistent!</p><p>It’s indeed a weird thing. You can easily tell something is not <em>consistent</em>,
+but can never make sure it is <em>consistent</em>.</p><p>But try to recall the last time when you factorize a large number!
+We easily see that 1561596 has a factor 2, but it may cost a lot to see if
+1594897 is itself a prime number.</p><p>That asymmetry is partly studied in a field called “theory of computation”,
+and I believe we are still very superficial in that aspect.</p>
+  
+  
+</div>
+  <img src="/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+<div class="summary astro-N7QZWMPI">
+  <h3 class="astro-N7QZWMPI">Summary of part 1</h3>
+
+  <p class="astro-N7QZWMPI">what you need to know after reading ...</p>
+
+  <p class="astro-N7QZWMPI">
+    </p><ul class="data astro-N7QZWMPI">
+        <div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>there is better a link to the place where it first appears</p></div><ul>
+<li>semantic (satisfiability, derivability) and syntactic (consistency, validity) concepts</li>
+<li>bbb</li>
+</ul>
+    </ul>
+  
+</div>
+<div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>give some exercises</p></div>
+<div style="font-size: larger; margin: 20px;">You can read more about computation, or move to the next chapter, on &#39;reasoning like a human&#39;.</div>
+<div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b>
+  make links more stylish
+</div>
+
+<div>
+      <a class="pale" id="ref-1" href="/ap1">
+        appendix on computation
+      </a>
+    </div><div>
+      <a class="pale" id="ref-2" href="/ch2">
+        next chapter
+      </a>
+    </div>
+    </div>
+  </body></html>
