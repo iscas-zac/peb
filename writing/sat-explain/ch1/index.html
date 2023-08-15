@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" crossorigin="anonymous">
     <meta name="generator" content="Astro v2.8.3">
     <title>Part 1 - basic concepts</title>
-  <link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.5c084be1.css" />
+  <link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.f3816e6c.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.7eaff66e.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.a235353a.css" />
+<link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.c40637a4.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.a1953195.css" />
-<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.393e4cb9.css" /></head>
+<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.be1789cf.css" /></head>
   <body>
     <div class="header astro-3EF6KSR2">
   <h1 class="header__title astro-3EF6KSR2">Part 1 - basic concepts</h1>
@@ -61,7 +62,7 @@
   document.addEventListener("DOMContentLoaded", visibility_update);
 </script>
   <nav class="header__nav astro-3EF6KSR2">
-    <span class="header__nav-item astro-3EF6KSR2"><a href="/overall" class="astro-3EF6KSR2">
+    <span class="header__nav-item astro-3EF6KSR2"><a href="/writing/sat-explain//overall" class="astro-3EF6KSR2">
       <svg viewBox="0 0 24 24" width="32" height="32" style="filter: invert(1);" class="astro-3EF6KSR2">
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" class="astro-3EF6KSR2"></path>
       </svg>
@@ -73,7 +74,7 @@
     </a></span>
   </nav>
 </div>
-    <div style="
+    <div class="top" style="
       margin: 0 auto;
       width: 100%;
       max-width: 100ch;
@@ -128,9 +129,9 @@
   
 </dialog>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
-    <p>Time to start, <b><strong>bold</strong></b> truth-seekers! Today we are going to face a logical problem.
+    <p>Time to start, <strong>bold</strong> truth-seekers! Today we are going to face a logical problem.
 Before that, have a look at this classic riddle:</p><p>Three kids are accused of breaking a window. Their statements are either true or false. Only one is telling a lie.</p><ul>
 <li>🐶 said, <span id="stmt1" onClick="
 var stmt1 = document.getElementById('stmt1');
@@ -168,18 +169,18 @@ each sentence see the contradictions if it is a lie.)</i></p>
   
   
 </div>
-  <img src="/writing/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
-  <img src="/writing/sat-explain/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -3deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
   
     <p>I might have seen this puzzle before. Let’s assume if 🐰 is telling a lie,
 and what 🐶 said shows that 😼 is telling a lie. A contradiction!</p><p>Well, let’s move on: if 🐶 is telling a lie, then 😼 claims 🐰 broke the window while
-🐰 denies, another contradiction!</p><p>…</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>make a table or something</p></div>
+🐰 denies, another contradiction! …</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>make a table or something</p></div>
   
   
 </div>
@@ -187,7 +188,7 @@ and what 🐶 said shows that 😼 is telling a lie. A contradiction!</p><p>Well
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
   
-  <img src="/writing/sat-explain/student2.png" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
   
@@ -201,10 +202,10 @@ and 😼, as well as between 😼 and 🐰. As we know there is at most
 </div>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
-  <img src="/writing/sat-explain/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
   
     <p>… If 😼 is telling a lie, then 🐶 is right, and 🐰 didn’t broke the window.</p><p>I have just finish my enumeration, and I agree that’s correct.</p>
   
@@ -215,8 +216,8 @@ and 😼, as well as between 😼 and 🐰. As we know there is at most
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
   
   
-  <img src="/writing/sat-explain/student-unknown.png" alt="a mysterious person under a fancy cloak, slightly looking to the right, simple lineart, parchment, comic style, sketch" class="astro-6736KINT">
-  <div contenteditable="true" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(122, 159, 97);--font: Indie Flower;">
+  <img src="/writing/sat-explain/student-unknown.svg" alt="a mysterious person under a fancy cloak, slightly looking to the right, simple lineart, parchment, comic style, sketch" class="astro-6736KINT">
+  <div contenteditable="true" class="astro-MHFLLGJW" style="--randomRotation: -4deg;--color: rgb(122, 159, 97);--font: Indie Flower;">
   
     <p>\ \ Whoa, I found a empty note? I can even write something here!  %<span class="math math-inline"><span class="katex-error" title="ParseError: KaTeX parse error: Double superscript at position 3: ^(^̲" style="color:#cc0000">^(^</span></span>^^(&amp;$@#!))</p>
   
@@ -224,7 +225,7 @@ and 😼, as well as between 😼 and 🐰. As we know there is at most
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -3deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>Good, you have found two different ways to solve the problem.
 However, we still need to look at it from a more formal perspective.</p><p>Let’s check your problem solving skills, which draw the same conclusion at last.
@@ -236,14 +237,14 @@ from the ‘axioms’.</p><p>And of course there is always a conclusion to be pr
   
   
 </div>
-  <img src="/writing/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
   
-  <img src="/writing/sat-explain/student2.png" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
   
     <p>This is where syntax comes in? So syntax is a way to rule out invalid
 things.</p>
@@ -252,7 +253,7 @@ things.</p>
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -3deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>Exactly, and we usually call a statement <em>consistent</em>, if no contradiction
 can be reasoned from it. This is a way to rule out incorrect guesses.</p><p>However, just like a detective solving a case, there are occasions when reasoning
@@ -262,14 +263,14 @@ last method, enumerating possible solutions and seek <em>truths</em>.</p><p>We c
   
   
 </div>
-  <img src="/writing/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
-  <img src="/writing/sat-explain/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -3deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
   
     <p>So a semantic concept is always linked to the world or the basic facts.</p>
   
@@ -288,14 +289,14 @@ in your middle school tests.</p><p>Now, who can give me a semantic version of va
   
   
 </div>
-  <img src="/writing/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
-  <img src="/writing/sat-explain/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -5deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -4deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
   
     <p>Easy. By enumerating every statement’s “trueness”, a conclusion statement is always true
 if the known conditions are all true!</p><p>Wait, does that mean, I can say “2 + 2 = 5” is valid and “semantically valid”,
@@ -306,7 +307,7 @@ condition true, and they don’t need to make the conclusion true then.</p>
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 2deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>Yep, despite that your sentence is an arithmetic statement and beyond our propositional logic.
 It is sometimes stated as “anything can be derived from a contradiction”.
@@ -315,14 +316,14 @@ to avoid confusion with the “validity” of the statement.</p>
   
   
 </div>
-  <img src="/writing/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
-  <img src="/writing/sat-explain/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
   
     <p>I got it. Let me explain the semantic consistency!</p><p>As stated before, the semantic consistency of a group of statements are
 actually about finding a set of values in the world to make every statement
@@ -338,14 +339,14 @@ satisfy.</p>
   
   
 </div>
-  <img src="/writing/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
   
-  <img src="/writing/sat-explain/student2.png" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 4deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -5deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
   
     <p>And finally, syntactic consistency! Like what satisfiability is to derivability,
 it’s also about finding a way to reason from some statement to some others!</p><p>Wait, that doesn’t make sense. Anything can be derived from a contradiction,
@@ -367,7 +368,7 @@ and I believe we are still very superficial in that aspect.</p>
   
   
 </div>
-  <img src="/writing/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
 <div class="summary astro-N7QZWMPI">
   <h3 class="astro-N7QZWMPI">Summary of part 1</h3>
@@ -384,19 +385,27 @@ and I believe we are still very superficial in that aspect.</p>
   
 </div>
 <div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>give some exercises</p></div>
-<div style="font-size: larger; margin: 20px;">You can read more about computation, or move to the next chapter, on &#39;reasoning like a human&#39;.</div>
-<div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b>
-  make links more stylish
-</div>
+<div style="margin: 100px 0;" class="astro-PUWGRYCF"></div>
 
-<div>
-      <a class="pale" id="ref-1" href="/writing/sat-explain/ap1">
+<div id="bordered" class="astro-PUWGRYCF">
+  
+  <i class="astro-PUWGRYCF">You can read more about computation, or move to the next chapter, on &#39;reasoning like a human&#39;.</i>
+  <div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b>
+    make links more stylish
+  </div>
+
+  <div style="margin: 50px 0;" class="astro-PUWGRYCF"></div>
+
+  <div style="display: flex;
+  justify-content: space-between; " class="astro-PUWGRYCF">
+  <a class="pale astro-PUWGRYCF" id="ref-1" href="/writing/sat-explain/ap1">
         appendix on computation
-      </a>
-    </div><div>
-      <a class="pale" id="ref-2" href="/writing/sat-explain/ch2">
+      </a><a class="pale astro-PUWGRYCF" id="ref-2" href="/writing/sat-explain/ch2">
         next chapter
       </a>
-    </div>
+  </div>
+</div>
+
+<div style="margin: 200px 0;" class="astro-PUWGRYCF"></div>
     </div>
   </body></html>

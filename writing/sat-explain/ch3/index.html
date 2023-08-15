@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" crossorigin="anonymous">
     <meta name="generator" content="Astro v2.8.3">
     <title>Part 3 - DPLL, CDCL and DPLL(T)</title>
-  <link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.5c084be1.css" />
+  <link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.f3816e6c.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.7eaff66e.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.a235353a.css" />
+<link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.c40637a4.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.46a6ce86.css" />
-<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.393e4cb9.css" /><script type="module" src="/writing/sat-explain/_astro/hoisted.1471ab0a.js"></script></head>
+<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.be1789cf.css" /><script type="module" src="/writing/sat-explain/_astro/hoisted.1471ab0a.js"></script></head>
   <body>
     <div class="header astro-3EF6KSR2">
   <h1 class="header__title astro-3EF6KSR2">Part 3 - DPLL, CDCL and DPLL(T)</h1>
@@ -61,7 +62,7 @@
   document.addEventListener("DOMContentLoaded", visibility_update);
 </script>
   <nav class="header__nav astro-3EF6KSR2">
-    <span class="header__nav-item astro-3EF6KSR2"><a href="/overall" class="astro-3EF6KSR2">
+    <span class="header__nav-item astro-3EF6KSR2"><a href="/writing/sat-explain//overall" class="astro-3EF6KSR2">
       <svg viewBox="0 0 24 24" width="32" height="32" style="filter: invert(1);" class="astro-3EF6KSR2">
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" class="astro-3EF6KSR2"></path>
       </svg>
@@ -73,7 +74,7 @@
     </a></span>
   </nav>
 </div>
-    <div style="
+    <div class="top" style="
       margin: 0 auto;
       width: 100%;
       max-width: 100ch;
@@ -128,7 +129,7 @@
   
 </dialog>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>We looked at the terminology and a few rules in the last chapter,
 only to find it too hard to follow.</p><p>In logic, reasoning by rule is usually more interesting. However,
@@ -142,14 +143,14 @@ let’s first introduce the CNF of logic statements.</p><p>“CNF” stands for 
   
   
 </div>
-  <img src="/writing/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
-  <img src="/writing/sat-explain/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
   
     <p>It’s like, well, “(1) a suitcase should weigh no more than 50kg, and (2) not exceed
 50cm in length, and (3) not exceed 50cm in width”. When a new rule arrives,
@@ -163,9 +164,9 @@ variables, because we need to satisfy every clause!</p>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
   
-  <img src="/writing/sat-explain/student2.png" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
   
     <p>But assume that the clauses are connected by “or”s, then we will only look at one of them
 and discard the rest. That will simply be too easy.</p><p>Also, there are “or”s Inside the clauses. Therefore, we only need to adjust
@@ -176,7 +177,7 @@ one variable to make a clause true.</p>
 </div>
 <img src="/writing/sat-explain/discard.jpg" alt=" person picking up a card and discarding the rest" style="width: 100%;"/>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 4deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>As we see before, “and”, “or” and “not” can represent all kinds of relations.
 Here we take a step further and think every statement in propositional
@@ -186,11 +187,11 @@ into a CNF, and …</p>
   
   
 </div>
-  <img src="/writing/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
-  <img src="/writing/sat-explain/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
   <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
@@ -204,7 +205,7 @@ connected by “or”, and it will be much easier to satisfy!</p>
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 4deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>Good point. There are general ways to convert things to those forms, but
 generally a hard problem in daily life comes with constraints that should
@@ -214,14 +215,14 @@ computers and our satisfiability problem?</p>
   
   
 </div>
-  <img src="/writing/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
   
-  <img src="/writing/sat-explain/student2.png" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 4deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
   
     <p>I’m told that computers are made of tiny switches. It understands only
 0 and 1 by turning those switches on and off.</p><p>And… A satisfiability problem also deals with variables that take 0 and 1
@@ -234,8 +235,8 @@ as its variables! It seems computers should understand logic by design!</p>
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
   
   
-  <img src="/writing/sat-explain/student-unknown.png" alt="a mysterious person under a fancy cloak, slightly looking to the right, simple lineart, parchment, comic style, sketch" class="astro-6736KINT">
-  <div contenteditable="true" class="astro-MHFLLGJW" style="--randomRotation: -3deg;--color: rgb(122, 159, 97);--font: Indie Flower;">
+  <img src="/writing/sat-explain/student-unknown.svg" alt="a mysterious person under a fancy cloak, slightly looking to the right, simple lineart, parchment, comic style, sketch" class="astro-6736KINT">
+  <div contenteditable="true" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: rgb(122, 159, 97);--font: Indie Flower;">
   
     <p>I hear that computers are <textarea></textarea>.</p>
   
@@ -244,10 +245,10 @@ as its variables! It seems computers should understand logic by design!</p>
 </div>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
-  <img src="/writing/sat-explain/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
   
     <p>I think computing machines are always following some rules. Maybe they can easily
 reason with the logical rules?</p>
@@ -276,14 +277,14 @@ possibility.</p>
   
   
 </div>
-  <img src="/writing/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
-  <img src="/writing/sat-explain/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -4deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
   
     <p>(murmuring) Exactly what I have done?</p>
   
@@ -291,7 +292,7 @@ possibility.</p>
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 2deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>So far that’s right. However, the number of combinations grows as we add
 more variables. For 2 variables, the computer enumerates 4 possibilities; for 3 variables, it enumerates 8.
@@ -305,14 +306,14 @@ things. And some folk managed to teach computers to do that! It’s called
   
   
 </div>
-  <img src="/writing/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
 
 <div style="display: flex; align-items: center;" class="astro-6736KINT">
-  <img src="/writing/sat-explain/student1.png" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 4deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
   
     <p>Make machines intuitive!?</p>
   
@@ -320,7 +321,7 @@ things. And some folk managed to teach computers to do that! It’s called
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -4deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>That makes sense. But we have another choice! Instead of a piece of
 information per every possibility, we give the computer some way to
@@ -338,25 +339,33 @@ Just like Ellen Poe, we have to rely again on reasoning, though in a structured 
   
   
 </div>
-  <img src="/writing/sat-explain/teacher.jpg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
 <div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>tell something about local search, describe the basic search procedure,
 introduce dpll/cdcl elegantly</p></div>
 <div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>make a summary that shows the knowledge points in this chapter</p></div>
-<div style="font-size: larger; margin: 20px;">Read more about search, or go to the next chapter for
-a final (yet) solution for SAT!</div>
-<div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b>
-  make links more stylish
-</div>
+<div style="margin: 100px 0;" class="astro-PUWGRYCF"></div>
 
-<div>
-      <a class="pale" id="ref-1" href="/writing/sat-explain/ap3">
+<div id="bordered" class="astro-PUWGRYCF">
+  
+  <i class="astro-PUWGRYCF">Read more about search, or go to the next chapter for
+a final (yet) solution for SAT!</i>
+  <div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b>
+    make links more stylish
+  </div>
+
+  <div style="margin: 50px 0;" class="astro-PUWGRYCF"></div>
+
+  <div style="display: flex;
+  justify-content: space-between; " class="astro-PUWGRYCF">
+  <a class="pale astro-PUWGRYCF" id="ref-1" href="/writing/sat-explain/ap3">
         appendix 3
-      </a>
-    </div><div>
-      <a class="pale" id="ref-2" href="/writing/sat-explain/ch4">
+      </a><a class="pale astro-PUWGRYCF" id="ref-2" href="/writing/sat-explain/ch4">
         next chapter
       </a>
-    </div>
+  </div>
+</div>
+
+<div style="margin: 200px 0;" class="astro-PUWGRYCF"></div>
     </div>
   </body></html>

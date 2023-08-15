@@ -9,9 +9,11 @@
     <meta name="generator" content="Astro v2.8.3">
     <title>From riddles to CDCL: An Adventure</title>
   <link rel="stylesheet" href="/writing/sat-explain/_astro/hoisted.4b398481.css" />
-<link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.5c084be1.css" />
+<link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.f3816e6c.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.a235353a.css" />
-<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.393e4cb9.css" /><script type="module" src="/writing/sat-explain/_astro/hoisted.15464c45.js"></script></head>
+<link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.c40637a4.css" />
+<link rel="stylesheet" href="/writing/sat-explain/_astro/overall.6ed078d3.css" />
+<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.be1789cf.css" /><script type="module" src="/writing/sat-explain/_astro/hoisted.15464c45.js"></script></head>
   <body>
     <div class="header astro-3EF6KSR2">
   <h1 class="header__title astro-3EF6KSR2">From riddles to CDCL: An Adventure</h1>
@@ -60,7 +62,7 @@
   document.addEventListener("DOMContentLoaded", visibility_update);
 </script>
   <nav class="header__nav astro-3EF6KSR2">
-    <span class="header__nav-item astro-3EF6KSR2"><a href="/overall" class="astro-3EF6KSR2">
+    <span class="header__nav-item astro-3EF6KSR2"><a href="/writing/sat-explain//overall" class="astro-3EF6KSR2">
       <svg viewBox="0 0 24 24" width="32" height="32" style="filter: invert(1);" class="astro-3EF6KSR2">
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" class="astro-3EF6KSR2"></path>
       </svg>
@@ -72,56 +74,57 @@
     </a></span>
   </nav>
 </div>
-    <div style="
+    <div class="top" style="
       margin: 0 auto;
       width: 100%;
       max-width: 100ch;
       padding: 1rem;
       line-height: 1.5;">
-      <p>In history of problem solving, logic is one of the keys to a ‘universal theory’.</p>
-<p>In this article, I will show you around the logic world, especially
-about the SAT problem and the DPLL, CDCL algorithms.</p>
-<p>… Or you will see it in your own way?</p>
+      <p>In history of problem solving, logic is one of the keys to a ‘universal theory’.
+You have always been interested in logic, but those symbols were too annoying.</p>
+<p>One day, you stumbled across a big book, with a title &quot;&quot;. You picked it up,
+and found some sentences on the preface.</p>
+<p>”</p>
+<click-highlight id="clickable" data-target="version" data-title="Version" data-desc="I mean, this is a incomplete webpage, and I decided to add more after deadline.
+Is this allowed by SoME? Tell me if it is not."><span id="version">0.99</span></click-highlight>
+<p>You decided to read it, but the book seemed so old, that you were afraid
+it would break into pieces.</p>
 <div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>make this sound more natural?</p></div>
-<p>Well, pretend you were putting your finger on that weird-looking book,
+<p>Well, you were putting your finger on that weird-looking book,
 thinking that it would bring you some knowledge on the logical decision.</p>
-<img src="/writing/sat-explain/preface.png" alt="a mysterious person under a fancy cloak looking at a book, 
-simple lineart, parchment, comic style, sketch" style="width: 100%"/>
+
 <p>Something fell from between the pages.</p>
 <div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>beautify the select thing, better add a video option</p></div>
-<div style="font-size: larger; margin: 20px;">When you knew what had happened, you said to yourself.</div>
-<div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b>
-  make links more stylish
+<div style="margin: 100px 0;" class="astro-PUWGRYCF"></div>
+
+<div id="bordered" class="astro-PUWGRYCF">
+  
+  <i class="astro-PUWGRYCF">When you knew what had happened, you said to yourself.</i>
+  <div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b>
+    make links more stylish
+  </div>
+
+  <div style="margin: 50px 0;" class="astro-PUWGRYCF"></div>
+
+  <div style="display: flex;
+  justify-content: space-between; " class="astro-PUWGRYCF">
+  <a class="pale astro-PUWGRYCF" id="ref-1" href="/writing/sat-explain/ch1">
+        &quot;A bunch of cards! Should I read all these?&quot;
+      </a><a class="pale astro-PUWGRYCF" id="ref-2" href="/writing/sat-explain/shortpath">
+        &quot;I don&#39;t have much time. Just check that page out.&quot;
+      </a>
+  </div>
 </div>
 
-<div>
-      <a class="pale" id="ref-1" href="/writing/sat-explain/ch1">
-        A bunch of notes! I wish somebody just explain logic in a friendly fashion.
-      </a>
-    </div><div>
-      <a class="pale" id="ref-2" href="/writing/sat-explain/shortpath">
-        I don&#39;t have much time. Just check that out.
-      </a>
-    </div>
-<h1 id="tips">tips</h1>
+<div style="margin: 200px 0;" class="astro-PUWGRYCF"></div>
+<h2 id="tips">tips</h2>
 <ol>
 <li>Any feedback is welcome at <a href="https://github.com/iscas-zac/sat-explain/discussions">https://github.com/iscas-zac/sat-explain/discussions</a>.</li>
-<li>Some effects are not implemented yet.</li>
+<li>Here used to be some AI illustrations. According to
+<a href="https://some.3b1b.co/content-policy#ai">SoME’s AI policy</a>, I replaced them with
+my hand-drawn. Well, tell me if I could post those.</li>
 <li>Use <click-highlight id="clickable" data-target="mode" data-title="Click me!" data-desc="oops, you found me?">
-different browsing mode </click-highlight>
-
-
-<style>
-        > * { display:block; }
-        click-highlight::before { content:'<click-highlight>' }
-        click-highlight::after { content:'</click-highlight>' }
-
-        *::before, *::after {
-        color:rgba(136, 18, 128, 0.5);
-        font-weight:100;
-        font-size:1.0em;
-        }
-    </style>
+<span class="bare">different browsing modes</span> </click-highlight>
 on the upper right selection bar.</li>
 <li>Have fun!</li>
 </ol>
