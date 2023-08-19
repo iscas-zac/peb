@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.a235353a.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.c40637a4.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.46a6ce86.css" />
-<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.be1789cf.css" /><script type="module" src="/writing/sat-explain/_astro/hoisted.1471ab0a.js"></script></head>
+<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.33e8e8a7.css" /><script type="module" src="/writing/sat-explain/_astro/hoisted.1471ab0a.js"></script></head>
   <body>
     <div class="header astro-3EF6KSR2">
   <h1 class="header__title astro-3EF6KSR2">Appendix 1 - consistency, completeness and the limit</h1>
@@ -79,7 +79,52 @@
       max-width: 100ch;
       padding: 1rem;
       line-height: 1.5;">
-      <p>…</p>
-<p>Read along about <a href="./ch2">reasoning like humankind</a>.</p>
+      <h2 id="a-note">A Note</h2>
+<p>The appendices are intended as a window for some interesting topics,
+and unfortunately also a storage place for inmature thoughts. So please
+refer to professional works for further information.</p>
+<h2 id="consistency-revisited">Consistency Revisited</h2>
+<p>As your ‘classmates’ have mentioned in the conversations, the consistency
+of a logical system means whether there are conflicts in it. If an
+arithmetic system (with boolean operations as well as <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo><mo separator="true">,</mo><mo>−</mo><mo separator="true">,</mo><mo>×</mo><mo separator="true">,</mo><mo>÷</mo></mrow><annotation encoding="application/x-tex">+, -, \times, \div</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em"></span><span class="mord">+</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord">−</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord">×</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em"></span><span class="mord">÷</span></span></span></span></span>)
+asserts ‘2 + 2 = 5’ after some deduction, while keeping other concepts
+aligned to the elementary textbook, then it is inconsistent.
+We are also aware now that a system can not be easily judged as consistent.</p>
+<p>Concepts like ‘consistency’ are something that describes the whole system.
+It’s like we praise a car as ‘well-made’ if every screw and gear fit well.
+Therefore, people are eager to measure such properties.</p>
+<h2 id="on-completeness-and-others">On Completeness, and Others</h2>
+<p>There are some other ideas like that, one of which is <strong>completeness</strong>. A
+system is complete when it can describe everything in its vocabulary.
+For a logical system, it should be able to prove or falsify any statement.</p>
+<p>Consistency still lives in the syntactic world, that is, the system
+itself. But completeness can communicate with the semantic world as well.
+In fact, a common way of proving incompleteness is to find a statement
+that has clear semantic truth value but can not be deduced in the system.
+Completeness is thus defined as, “all that is <code>true</code> can be proved in the
+system”.</p>
+<p>The concept <strong>computability</strong> and <strong>decidability</strong> are deeply interwined with computer science,
+which is usually linked with some kind of problems, just lik SAT. Some problem is
+computable if we will finally know the answer in finite time. (The undecidable may
+just end up with a loop.)</p>
+<p>Conversely, there is another property, ‘soundness’, saying “all that can
+be proved in the system is <code>true</code>“.</p>
+<h2 id="the-theorem">The Theorem</h2>
+<p>People say propositional logic is sound and complete, and consistent. But just is
+there something that is not?</p>
+<p>Well, the not-so-perfect systems are easily built. To be inconsistent, we can just
+introduce a rule that proves a statement and its negation together, for example A and not A. To be
+incomplete, we simply remove every syntactic rule in the system. To be unsound,
+we simply introduce a rule that proves something false.</p>
+<p>However, these properties are not independent. We know that everything is provable
+from a contradiction, which is exactly what inconsistency grants. Therefore, if
+some logic (which admits ‘everything is provable from a contradiction’) is inconsistent,
+it is then complete.</p>
+<p>Mathematicians used to think that some common logical systems were consistent and
+complete, until the famous Theorem of Incomplete stood out. It is basically derived
+from a ‘liar paradox’, where one sentence claims itself to be false. From then on,
+people understand that if the system is powerful enough, it can not be both consistent
+and complete.</p>
+<p>Read along about <a href="../ch2">reasoning like humankind</a>.</p>
     </div>
   </body></html>
