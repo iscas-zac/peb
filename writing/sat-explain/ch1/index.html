@@ -9,12 +9,12 @@
     <meta name="generator" content="Astro v2.8.3">
     <title>Part 1 - basic concepts</title>
   <link rel="stylesheet" href="/writing/sat-explain/_astro/hoisted.4b398481.css" />
-<link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.f3816e6c.css" />
+<link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.63c92de2.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.7eaff66e.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.a235353a.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.c40637a4.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.a1953195.css" />
-<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.33e8e8a7.css" /><script type="module" src="/writing/sat-explain/_astro/hoisted.15464c45.js"></script></head>
+<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.dcf1e7ea.css" /><script type="module" src="/writing/sat-explain/_astro/hoisted.15464c45.js"></script></head>
   <body>
     <div class="header astro-3EF6KSR2">
   <h1 class="header__title astro-3EF6KSR2">Part 1 - basic concepts</h1>
@@ -29,7 +29,7 @@
   <div style="flex: 0 0 30%;" class="astro-3EF6KSR2"></div>
   <select id="mode" autocomplete="off" required>
   <option value="plain" selected>plain</option>
-  <option value="formal">formula</option>
+  <option value="formal">formal</option>
   <option value="code">code</option>
   <option value="voice">voice</option>
   <option value="history">history</option>
@@ -40,7 +40,6 @@
 
 <script>
   const selectElement = document.getElementById("mode");
-  console.log(selectElement);
   const visibility_update = function () {
     for (const label of [
       "plain",
@@ -83,24 +82,23 @@
       line-height: 1.5;">
       <dialog class="astro-IXW4XEFC">
   <b style="font-size: larger; line-height: 50px;" class="astro-IXW4XEFC">What is the difference between syntactic and semantic concepts in logic?</b>
-  <form name="quiz" class="astro-IXW4XEFC">
-    <div class="astro-IXW4XEFC">
-          <input type="radio" name="answer" value="1" class="astro-IXW4XEFC">
-          <label class="astro-IXW4XEFC">A syntactic concept means something one wants to convey by a statement, while a semantic one means something it actually conveys.</label>
-        </div><div class="astro-IXW4XEFC">
-          <input type="radio" name="answer" value="2" class="astro-IXW4XEFC">
-          <label class="astro-IXW4XEFC">A syntactic concept means something to be deduced, while a semantic one means something to be verified.</label>
-        </div><div class="astro-IXW4XEFC">
-          <input type="radio" name="answer" value="1" class="astro-IXW4XEFC">
-          <label class="astro-IXW4XEFC">A syntactic concept means something true by default, while a semantic one means something to be proved.</label>
-        </div><div class="astro-IXW4XEFC">
-          <input type="radio" name="answer" value="1" class="astro-IXW4XEFC">
-          <label class="astro-IXW4XEFC">I want to learn more about it.</label>
-        </div>
-  </form>
-  <button style="font-size: larger;" onclick="
-    submit()
-    " class="astro-IXW4XEFC">confirm</button>
+
+  <div class="astro-IXW4XEFC">
+        <input type="radio" name="answer" value="1" onclick="submit()" class="astro-IXW4XEFC">
+        <label class="astro-IXW4XEFC">A syntactic concept means something one wants to convey by a statement, while a semantic one means something it actually conveys.</label>
+      </div><div class="astro-IXW4XEFC">
+        <input type="radio" name="answer" value="2" onclick="submit()" class="astro-IXW4XEFC">
+        <label class="astro-IXW4XEFC">A syntactic concept means something to be deduced, while a semantic one means something to be verified.</label>
+      </div><div class="astro-IXW4XEFC">
+        <input type="radio" name="answer" value="1" onclick="submit()" class="astro-IXW4XEFC">
+        <label class="astro-IXW4XEFC">A syntactic concept means something true by default, while a semantic one means something to be proved.</label>
+      </div><div class="astro-IXW4XEFC">
+        <input type="radio" name="answer" value="1" onclick="submit()" class="astro-IXW4XEFC">
+        <label class="astro-IXW4XEFC">I want to learn more about it.</label>
+      </div>
+
+  <div style="margin: 30px;" class="astro-IXW4XEFC"></div>
+
   <div class="astro-IXW4XEFC"><a class="pale astro-IXW4XEFC" id="ref-1" href="#">
           I&#39;d read through this chapter
         </a></div><div class="astro-IXW4XEFC"><a class="pale astro-IXW4XEFC" id="ref-2" href="/writing/sat-explain/ch2">
@@ -112,7 +110,8 @@
 
     const links = document.querySelectorAll('a[href="#"]');
     links.forEach((element) => {
-      element.addEventListener("click", function () {
+      element.addEventListener("click", function (el) {
+        el.preventDefault();
         dialog?.close();
       });
     });
@@ -130,7 +129,7 @@
   
 </dialog>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -4deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>Time to start, <strong>bold</strong> truth-seekers! Today we are going to solve some logical problems.
 For example, have a look at this classic riddle:</p><p>Three kids are accused of breaking a window. Their statements are either true or false. Only one is telling a lie.</p><ul>
@@ -178,7 +177,7 @@ each sentence see the contradictions if it is a lie.)</i></p>
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 4deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -4deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
   
     <p>I might have seen this puzzle before. Let’s assume if 🐰 is telling a lie,
 and what 🐶 said shows that 😼 is telling a lie. A contradiction!</p><p>Well, let’s move on: if 🐶 is telling a lie, then 😼 claims 🐰 broke the window while
@@ -207,7 +206,7 @@ and 😼, as well as between 😼 and 🐰. As we know there is at most
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
   
     <p>… If 😼 is telling a lie, then 🐶 is right, and 🐰 didn’t broke the window.</p><p>I have just finish my enumeration, and I agree that’s correct.</p><span class="plain">
 
@@ -308,7 +307,7 @@ The words “only 1️⃣ is telling a lie” explicitly excluded some possibili
   
   
   <img src="/writing/sat-explain/student-unknown.svg" alt="a mysterious person under a fancy cloak, slightly looking to the right, simple lineart, parchment, comic style, sketch" class="astro-6736KINT">
-  <div contenteditable="true" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(122, 159, 97);--font: Indie Flower;">
+  <div contenteditable="true" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(122, 159, 97);--font: Indie Flower;">
   
     <click-highlight id="clickable" data-target="my_note" data-title="Temporarily unresponsive" data-desc="Well, you caught me again! This thing is really editable,
 but it's just that. I have not yet figured out what to do with it,
@@ -320,7 +319,7 @@ If you have an idea or dark magic for this, feedback is welcome!"><span class="m
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 4deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>Good, you have found two different ways to solve the problem.
 However, we still need to look at them from a more formal perspective.</p><p>As you have discovered, we are now dealing with the <em>statement</em>s, or
@@ -329,114 +328,12 @@ sentences / propositions / formulas, which are interchangeably used here.</p><sp
 that is capable of having a truth-value, such as being true or false. (Quote
 from <a href="https://iep.utm.edu/propositional-logic-sentential-logic/">online resource</a>)</p>
 </blockquote></span><p>for you who easily spot the contradiction, and derive everything from the prerequisites,
-we call this process <em>reasoning</em>.</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>highlight with color, emoji and even styles</p></div><p>The reasoning process has some key elements. For example, axioms are
-some kinds of statements we all agree.
-Every reasoning process must have a beginning.</p><p>And syntax, deduction, or rules, whatever you like. Like a detective, we draw a conclusion
-from the axioms.</p><p>And of course there is always a conclusion to be proved.</p>
-  
-  
-</div>
-  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
-</div>
-
-<div style="display: flex; align-items: center;" class="astro-6736KINT">
-  
-  <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
-  
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
-  
-    <p>This is where syntax comes in? So syntax is a way to rule out invalid
-things.</p>
-  
-  
-</div>
-</div>
-<div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 2deg;--color: aquamarine;--font: IM Fell DW Pica;">
-  
-    <p>Exactly, and we usually call a statement <em>consistent</em>, if no contradiction
-can be reasoned from it. This is a way to rule out incorrect guesses.</p><p>However, just like a detective solving a case, there are occasions when reasoning
-fails. When faced with similar puzzles, we human usually identify the reasoning rules,
-and try to deduce with them. If no more information can be deduced, we turn to the
-last method, enumerating possible solutions and seek <em>truths</em>.</p><p>For you who check all possible solutions, and filter out the unqualified,
-the work is enormous, yet effective. When we talk about <em>enumerate</em>,
-<em>possibility</em>, <em>combination</em>, we are using this method.</p><p>We consider this a semantic process, and the truths are said to be <em>satisfying</em>.</p>
-  
-  
-</div>
-  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
-</div>
-
-<div style="display: flex; align-items: center;" class="astro-6736KINT">
-  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
-  
-  
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
-  
-    <p>So a semantic concept is always linked to the world or the basic facts.</p>
-  
-  
-</div>
-</div>
-<div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -4deg;--color: aquamarine;--font: IM Fell DW Pica;">
-  
-    <p>The puzzle has three statements, each of which is either true or false.
-Everything is a yes-or-no question, that is exactly how <em>propositional logic</em> sees the world.</p><p>We’ll talk more about propositional logic later. In fact, our discussion is all about
-propositions if not otherwise mentioned.</p><p>Before we move on, let’s grab some syntactic and semantic concepts. We would say
-in the reasoning process, some conclusion is <strong>valid</strong> given a set of conditions,
+we call this process <em>(formal) reasoning</em>.</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>highlight with color, emoji and even styles</p></div><p>The reasoning process is like inspecting a crime case, which involves classical steps.
+We have premises, some statements given as a starting point; we have syntax rules,
+with which a new statement is acquired from existing ones; and we have a
+target, or conclusion, the fact we desire.</p><p>In this syntax, we say something is <strong>derivable</strong>, or provable, given a set of conditions,
 that is, by reasoning, we can reach the conclusion, just like math proof questions
-in your middle school tests.</p><p>Now, who can give me a semantic version of validity?</p>
-  
-  
-</div>
-  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
-</div>
-
-<div style="display: flex; align-items: center;" class="astro-6736KINT">
-  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
-  
-  
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -3deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
-  
-    <p>Easy. By enumerating every statement’s “trueness”, a conclusion statement is always true
-if the known conditions are all true!</p><p>Wait, does that mean, I can say “2 + 2 = 5” is valid and “semantically valid”,
-given the condition “1 + 1 = 3”? Nothing in the enumeration makes the
-condition true, and they don’t need to make the conclusion true then.</p>
-  
-  
-</div>
-</div>
-<div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: aquamarine;--font: IM Fell DW Pica;">
-  
-    <p>Yep, despite that your sentence is an arithmetic statement and beyond our propositional logic.
-It is sometimes stated as “anything can be derived from a contradiction”.
-By the way, the “semantical validity” is referred to as “derivability” here,
-to avoid confusion with the “validity” of the statement.</p>
-  
-  
-</div>
-  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
-</div>
-
-<div style="display: flex; align-items: center;" class="astro-6736KINT">
-  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
-  
-  
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
-  
-    <p>I got it. Let me explain the semantic consistency!</p><p>As stated before, the semantic consistency of a group of statements are
-actually about finding a set of values in the world to make every statement
-satisfy.</p>
-  
-  
-</div>
-</div>
-<div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 4deg;--color: aquamarine;--font: IM Fell DW Pica;">
-  
-    <p>Yes. The semantic consistency is also called satisfiability,</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>explain what SAT means</p></div><p>and we are going to dig deep in that finding process later.</p>
+in your middle school tests.</p><span class="formal"><p>The related theory is proof theory.</p></span>
   
   
 </div>
@@ -449,6 +346,118 @@ satisfy.</p>
   
   <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
   
+    <p>This is where syntax comes in? So syntax is a way to rule out
+things by only focusing on the valid statements.</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>Exactly, and we usually call a statement <em>consistent</em>, if no contradiction
+can be reasoned from it. This is a way to rule out incorrect guesses.<span class="formal">
+Contradiction in propositional logic is simply claiming some statement is both
+true and false.</span></p><p>However, just like a detective solving a case, there are occasions when reasoning
+fails. When faced with similar puzzles, we humans usually identify the reasoning rules,
+and try to deduce with them. If no more information can be deduced, we turn to the
+other method, enumerating possible solutions and seek <em>truths</em>.</p><p>For you who check all possible solutions, and filter out the unqualified,
+the work is tedious, yet effective. When we talk about <em>enumerate</em>,
+<em>possibility</em>, <em>combination</em>, we are using this method.</p><p>We consider this a semantic process, and the truths are said to be <em>satisfying</em>,
+or simply <em>true</em>, in our daily sense. Note the key difference between a
+true sentence and a provable sentence, although they usually comes together.</p><span class="formal"><p>The related theory is model theory. So the thing is a bit tricker when involving a
+model of the world. For some logic, the thing that is directly linked to
+a logical object is not unique, and may involve multiple <em>interpretation</em>s.</p></span>
+  
+  
+</div>
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  
+    <p>So a semantic concept is always linked to the world or the basic facts.</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -4deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>The puzzle has three statements, each of which is either true or false.
+Everything is a yes-or-no question, that is exactly how <em>propositional logic</em> sees the world.</p><p>We’ll talk more about propositional logic later. In fact, our discussion is all about
+propositions if not otherwise mentioned.</p><p>Before we move on, let’s grab some syntactic and semantic concepts. We have
+see the syntactic concept derivability before.
+Now, who can give me a semantic version of derivability?</p>
+  
+  
+</div>
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 4deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  
+    <p>Easy. By enumerating every truth value combination like every line in
+the table I drew, a conclusion statement is always true
+if the known conditions are all true!</p><p>Wait, does that mean, I can say “2 + 2 = 5” is derivable and “semantically derivable”,
+given the condition “1 + 1 = 3”? Nothing makes the
+condition true, and they don’t need to make the conclusion true then.</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>Yep, despite that your sentence is an arithmetic statement and beyond our propositional logic.
+We’d better only consider the formulas whose truth value can be enumerated!
+It is sometimes stated as “anything can be derived from a contradiction”.</p><p>By the way, <em>semantical derivability</em> is referred to as <em>validity</em> here,
+to avoid confusion with the “validity” of the statement.</p>
+  
+  
+</div>
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(152, 65, 193);--font: IM Fell DW Pica;">
+  
+    <p>I get it. And we have seen the semantical consistency!</p><p>As stated before, the semantical consistency of a group of statements are
+actually about finding a set of values in the world to make every statement
+satisfy.</p>
+  
+  
+</div>
+</div>
+<div style="display: flex; align-items: center;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  
+    <p>Yes. The semantical consistency is also called satisfiability,</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>explain what SAT means</p></div><p>and we are going to talk about how to know if a statement is satisfiable.
+In propositional logic, it is called <em>Boolean Satisfiability Problem</em>, or
+SAT for short. For example, we decided which one is lying in the puzzle.</p>
+  
+  
+</div>
+  <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
+</div>
+
+<div style="display: flex; align-items: center;" class="astro-6736KINT">
+  
+  <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
+  
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(183, 2, 66);--font: IM Fell DW Pica;">
+  
     <p>And finally, syntactic consistency! Like what satisfiability is to derivability,
 it’s also about finding a way to reason from some statement to some others!</p><p>Wait, that doesn’t make sense. Anything can be derived from a contradiction,
 and I remember that consistency means no contradiction can be deduced.</p><p>Can I make sure every statement derived is not a contradiction? That should suffice.</p>
@@ -457,15 +466,18 @@ and I remember that consistency means no contradiction can be deduced.</p><p>Can
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 3deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>Sorry, there are usually infinite derivations from a propositional logic thing.
 That is, a set of statements are inconsistent if contradiction can be deduced.
 However, nothing tells you if they are consistent!</p><p>It’s indeed a weird thing. You can easily tell something is not <em>consistent</em>,
 but can never make sure it is <em>consistent</em>.</p><p>But try to recall the last time when you factorize a large number!
 We easily see that 1561596 has a factor 2, but it may cost a lot to see if
-1594897 is itself a prime number.</p><p>That asymmetry is partly studied in a field called “theory of computation”,
-and I believe we are still very superficial in that aspect.</p>
+1594897 is itself a prime number.</p><p>That asymmetry is partly studied in a field called <em>theory of computation</em>,
+and I believe we are still very superficial in that aspect.</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>give more exercises</p></div><p>Exercise:</p><ol>
+<li>tell me if pythagoras theorem is derivable or valid, in the case when
+someone deduces it from some geometrical magic.</li>
+</ol>
   
   
 </div>
@@ -479,13 +491,12 @@ and I believe we are still very superficial in that aspect.</p>
   <p class="astro-N7QZWMPI">
     </p><ul class="data astro-N7QZWMPI">
         <div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>there is better a link to the place where it first appears</p></div><ul>
-<li>semantic (satisfiability, derivability) and syntactic (consistency, validity) concepts</li>
-<li>bbb</li>
+<li>We talked about semantic (satisfiability, derivability) and syntactic (consistency, validity) concepts.</li>
+<li>The propositional logic only cares about some statements’ truth value.</li>
 </ul>
     </ul>
   
 </div>
-<div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>give some exercises</p></div>
 <div style="margin: 100px 0;" class="astro-PUWGRYCF"></div>
 
 <div id="bordered" class="astro-PUWGRYCF">
