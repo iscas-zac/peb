@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" crossorigin="anonymous">
     <meta name="generator" content="Astro v2.8.3">
     <title>Part 3 - DPLL, CDCL and DPLL(T)</title>
-  <link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.63c92de2.css" />
+  <link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.a44440ab.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.7eaff66e.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.a235353a.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.c40637a4.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.46a6ce86.css" />
-<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.dcf1e7ea.css" /><script type="module" src="/writing/sat-explain/_astro/hoisted.1471ab0a.js"></script></head>
+<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.92a3fd20.css" /><script type="module" src="/writing/sat-explain/_astro/hoisted.1471ab0a.js"></script></head>
   <body>
     <div class="header astro-3EF6KSR2">
   <h1 class="header__title astro-3EF6KSR2">Part 3 - DPLL, CDCL and DPLL(T)</h1>
@@ -128,7 +128,7 @@
   
 </dialog>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>We looked at the terminology and a few rules in the last chapter,
 only to find it too hard to follow.</p><p>In logic, reasoning by rule is usually more interesting. However,
@@ -149,7 +149,7 @@ let’s first introduce the CNF of logic statements.</p><p>“CNF” stands for 
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
   
     <p>It’s like, well, “(1) a suitcase should weigh no more than 50kg, and (2) not exceed
 50cm in length, and (3) not exceed 50cm in width”. When a new rule arrives,
@@ -165,7 +165,7 @@ variables, because we need to satisfy every clause!</p>
   
   <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
   
     <p>But assume that the clauses are connected by “or”s, then we will only look at one of them
 and discard the rest. That will simply be too easy.</p><p>Also, there are “or”s Inside the clauses. Therefore, we only need to adjust
@@ -174,11 +174,12 @@ one variable to make a clause true.</p>
   
 </div>
 </div>
-<img src="/writing/sat-explain/discard.jpg" alt=" person picking up a card and discarding the rest" style="width: 100%;"/>
+
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
-    <p>As we see before, “and”, “or” and “not” can represent all kinds of relations.
+    <p>It is possible for you to look at how a SAT problem is presented, as well as
+its difficulty, at <a href="https://www.cril.univ-artois.fr/~roussel/satgame/satgame.php">The SAT Game</a>.</p><p>As we see before, “and”, “or” and “not” can represent all kinds of relations.
 Here we take a step further and think every statement in propositional
 logic can be represented in such three levels. There are some ways to convert
 any kind of propositional logic statements, even more general problem statements,
@@ -204,7 +205,7 @@ connected by “or”, and it will be much easier to satisfy!</p>
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>Good point. There are general ways to convert things to those forms, but
 generally a hard problem in daily life comes with constraints that should
@@ -221,7 +222,7 @@ computers and our satisfiability problem?</p>
   
   <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
   
     <p>I’m told that computers are made of tiny switches. It understands only
 0 and 1 by turning those switches on and off.</p><p>And… A satisfiability problem also deals with variables that take 0 and 1
@@ -235,7 +236,7 @@ as its variables! It seems computers should understand logic by design!</p>
   
   
   <img src="/writing/sat-explain/student-unknown.svg" alt="a mysterious person under a fancy cloak, slightly looking to the right, simple lineart, parchment, comic style, sketch" class="astro-6736KINT">
-  <div contenteditable="true" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: rgb(201, 158, 249);--font: Indie Flower;">
+  <div contenteditable="true" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(201, 158, 249);--font: Indie Flower;">
   
     <p>I hear that computers are <textarea></textarea>.</p>
   
@@ -247,7 +248,7 @@ as its variables! It seems computers should understand logic by design!</p>
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 2deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
   
     <p>I think computing machines are always following some rules. Maybe they can easily
 reason with the logical rules?</p>
@@ -283,7 +284,7 @@ possibility.</p>
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
   
     <p>(murmuring) Exactly what I have done?</p>
   
@@ -312,7 +313,7 @@ things. And some folk managed to teach computers to do that! It’s called
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -3deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 2deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
   
     <p>Make machines intuitive!?</p>
   
@@ -320,7 +321,7 @@ things. And some folk managed to teach computers to do that! It’s called
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>That makes sense. But we have another choice! Instead of a piece of
 information per every possibility, we give the computer some way to
@@ -332,9 +333,10 @@ just like the progress bar in your downloader!</p><p>We instruct the machine to 
 in one combination, look at its neighbors, and pick up the best one to live in!
 Ideally, the satisfied clauses adds up, and finally everything is fine.</p><p>That sort of search, we often call “local search”, only checks a “local” property.
 That is, some combinations that live together. It knows very little about the
-general information, and yet it is powerful enough for many problem sets.</p><p>Of course, there are harder problems. Imagine searching for a lost letter in a big house,
-while the dumb policemen only knew to ambush the owner’s wagon!
-Just like Ellen Poe, we have to rely again on reasoning, though in a structured manner.</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>explain assignment, sketch the search in combination space by ‘flip’</p></div>
+general information, and yet it is powerful enough for many problem sets.</p><p>Of course, there are harder problems. Imagine searching for a
+<a href="https://en.wikipedia.org/wiki/The_Purloined_Letter">purloined letter</a>,
+while the dumb policemen only knew to waylay the minister!
+We have to rely again on reasoning, though in a structured manner.</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>explain assignment, sketch the search in combination space by ‘flip’</p></div>
   
   
 </div>
