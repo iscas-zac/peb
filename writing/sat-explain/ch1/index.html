@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.c40637a4.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.0ea21d85.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.7db73312.css" />
-<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.92a3fd20.css" /><script type="module" src="/writing/sat-explain/_astro/hoisted.8b4512b4.js"></script></head>
+<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.22fffdbf.css" /><script type="module" src="/writing/sat-explain/_astro/hoisted.8b4512b4.js"></script></head>
   <body>
     <div class="header astro-3EF6KSR2">
   <h1 class="header__title astro-3EF6KSR2">Part 1 - basic concepts</h1>
@@ -33,8 +33,8 @@
   <option value="plain" selected>plain</option>
   <option value="formal">formal</option>
   <option value="code">code</option>
-  <option value="voice">voice</option>
-  <option value="history">history</option>
+  <option value="voice">voice (unimplemented)</option>
+  <option value="history">history (unimplemented)</option>
   <option value="TODO">⚠️DEVELOPER MODE⚠️</option>
 </select>
 
@@ -143,7 +143,7 @@
   
 </dialog>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>Time to start, <strong>bold</strong> truth-seekers! Today we are going to solve some logical problems.
 For example, have a look at this classic riddle:</p><p>Three kids are accused of breaking a window. Their statements are either true or false. Only one is telling a lie.</p><ul>
@@ -191,7 +191,7 @@ each sentence to see the contradictions if it is a lie.)</i></p>
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
   
     <p>I might have seen this puzzle before. Let’s assume if 🐰 is telling a lie,
 and what 🐶 said shows that 😼 is telling a lie. A contradiction!</p><p>Well, let’s move on: if 🐶 is telling a lie, then 😼 claims 🐰 broke the window while
@@ -205,7 +205,7 @@ and what 🐶 said shows that 😼 is telling a lie. A contradiction!</p><p>Well
   
   <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
   
     <p>Hey, move aside! I have found a secret. The statements of 🐶 and 😼
 always contradict with each other, so at most one of them is true!</p><p>The same is for 😼 and 🐰. As a result, there is a lier between 🐶
@@ -220,7 +220,7 @@ and 😼, as well as between 😼 and 🐰. As we know there is at most
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
   
     <p>… If 😼 is telling a lie, then 🐶 is right, and 🐰 didn’t broke the window.</p><p>I have just finish my enumeration, and I agree that’s correct.</p><span class="plain">
 
@@ -321,7 +321,7 @@ The words “only 1️⃣ is telling a lie” explicitly excluded some possibili
   
   
   <img src="/writing/sat-explain/student-unknown.svg" alt="a mysterious person under a fancy cloak, slightly looking to the right, simple lineart, parchment, comic style, sketch" class="astro-6736KINT">
-  <div contenteditable="true" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(201, 158, 249);--font: Indie Flower;">
+  <div contenteditable="true" class="astro-MHFLLGJW" style="--randomRotation: -3deg;--color: rgb(201, 158, 249);--font: Indie Flower;">
   
     <click-highlight id="clickable" data-target="my_note" data-title="Temporarily unresponsive" data-desc="Well, you caught me again! This thing is really editable,
 but it's just that. I have not yet figured out what to do with it,
@@ -335,9 +335,24 @@ If you have an idea or dark magic for this, feedback is welcome!"><span class="m
 <div style="display: flex; align-items: center;">
   <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
-    <p>Good, you have found two different ways to solve the problem.
-However, we still need to look at them from a more formal perspective.</p><p>(Hey if you change to ‘code’ mode here, you will find a prolog playground!
-that is under constructions now)</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>make a better run button, add grammar highlighting</p></div><div class="code"><div class="textarea-header astro-ENELRZE6">
+    <p>Good, you have found two different ways to solve the problem. They are
+so similar that we can abstract them with a general process
+<sup style="color: #567; cursor: pointer; font-family: Georgia, 'Times New Roman', Times, serif;" onclick="const s = document.getElementById('mode'); s.value = 'code';
+s.dispatchEvent(new CustomEvent('change'));">[code]</sup>.</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>make a better run button, add grammar highlighting</p></div><div class="code"><p>Here we are tackling the puzzle with a programming language,
+<a href="http://tau-prolog.org/">Prolog</a>,
+which abstracts some interesting logical operations.</p><p>If you’re familiar with programming, feel free to skip the
+paragraphs to direct play with the code.</p><p>Prolog uses <code>First_letter_capitalized_word</code> as something unknown, and
+<code>first_letter_lowercase_word</code> as an entity. For example, we tell it that</p><pre class="astro-code github-dark" style="background-color:#24292e;overflow-x:auto" tabindex="0"><code><span class="line"><span style="color:#e1e4e8">person(alice).</span></span>
+<span class="line"><span style="color:#e1e4e8">person(bob).</span></span>
+<span class="line"><span style="color:#e1e4e8">person(cesi).</span></span></code></pre><p>, or that <code>alice</code>, <code>bob</code> and <code>cesi</code> are <code>person</code>s; and ask it that</p><pre class="astro-code github-dark" style="background-color:#24292e;overflow-x:auto" tabindex="0"><code><span class="line"><span style="color:#e1e4e8">person(X).</span></span></code></pre><p>, or that if <code>X</code> is a <code>person</code>, what does <code>X</code> represent.</p><p>The <em>predicate</em>s make anything inside have a <strong>property</strong>. In Prolog,
+we have seen that <code>person(alice)</code> makes <code>alice</code> have a property <code>person</code>.
+Predicates can establish a property, or <strong>relation</strong>, between more than one item, but
+we are not going to use such a feature.</p><p>We are also going to express causal relation with <code>:-</code> (if) and
+yes-or-no information with <code>\+</code> (not). For example, we tell Prolog that</p><pre class="astro-code github-dark" style="background-color:#24292e;overflow-x:auto" tabindex="0"><code><span class="line"><span style="color:#e1e4e8">truth_teller(X) :- person(X), \+ lie(X).</span></span>
+<span class="line"><span style="color:#e1e4e8">liar(X) :- person(X), lie(X).</span></span></code></pre><p>, the definition of “truth” and “lie”, and</p><pre class="astro-code github-dark" style="background-color:#24292e;overflow-x:auto" tabindex="0"><code><span class="line"><span style="color:#e1e4e8">break_window(cesi) :- \+ lie(bob).</span></span>
+<span class="line"><span style="color:#e1e4e8">lie(bob) :- \+ lie(alice).</span></span>
+<span class="line"><span style="color:#e1e4e8">lie(cesi) :- break_window(cesi).</span></span></code></pre><p>, what the three kids said. Note that I make some interpretations here.</p><p>(TODO: the program seems not very accurate. When I plug in more conditions,
+it still gives an answer, which does not make things satisfy.)</p><div class="textarea-header astro-ENELRZE6">
   <h2 class="astro-ENELRZE6">Solve via Prolog!</h2>
 </div>
 
@@ -354,17 +369,17 @@ liar(X) :- person(X), lie(X).
 % the constraints
 break_window(cesi) :- \+ lie(bob).
 lie(bob) :- \+ lie(alice).
-\break_window(cesi) :- \+ lie(cesi).
+lie(cesi) :- break_window(cesi).
 
-exactly_one_statement_holds :- 
-lie(A),
-lie(B),
-lie(C),
+exactly_one_lie :- 
+liar(A),
+truth_teller(B),
+truth_teller(C),
 A \= B,
 A \= C,
 B \= C.
 
-exactly_one_statement_holds.
+:- exactly_one_lie.
 " class="astro-ENELRZE6">
 </div>
 
@@ -387,7 +402,7 @@ padding: 10px; border: 3px ridge #ddd;" class="astro-2THJT47U">
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/tau-prolog@0.3.4/modules/core.min.js"></script>
 
-</div><p>As you have discovered, we are now dealing with the <em>statement</em>s, or
+</div><p>However, we still need to look at them from a more formal perspective.</p><p>As you have discovered, we are now dealing with the <em>statement</em>s, or
 sentences / propositions / formulas, which are interchangeably used here.</p><span class="formal"><blockquote>
 <p>A statement can be defined as a declarative sentence, or part of a sentence,
 that is capable of having a truth-value, such as being true or false. (Quote
@@ -409,7 +424,7 @@ in your middle school tests.</p><span class="formal"><p>The related theory is pr
   
   <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -3deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
   
     <p>This is where syntax comes in? So syntax is a way to rule out
 things by only focusing on the valid statements.</p>
@@ -418,7 +433,7 @@ things by only focusing on the valid statements.</p>
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>Exactly, and we usually call a statement <em>consistent</em>, if no contradiction
 can be reasoned from it. This is a way to rule out incorrect guesses.<span class="formal">
@@ -443,7 +458,7 @@ a logical object is not unique, and may involve multiple <em>interpretation</em>
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
   
     <p>So a semantic concept is always linked to the world or the basic facts.</p>
   
@@ -451,10 +466,10 @@ a logical object is not unique, and may involve multiple <em>interpretation</em>
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>The puzzle has three statements, each of which is either true or false.
-Everything is a yes-or-no question, that is exactly how <em>propositional logic</em> sees the world.</p><p>We’ll talk more about propositional logic later. In fact, our discussion is all about
+Everything is a yes-or-no question, that is exactly how <em>propositional logic</em> views the world.</p><p>We’ll talk more about propositional logic later. In fact, our discussion is all about
 propositions if not otherwise mentioned.</p><p>Before we move on, let’s grab some syntactic and semantic concepts. We have
 see the syntactic concept derivability before.
 Now, who can give me a <u>semantic version of derivability</u>?</p>
@@ -468,7 +483,7 @@ Now, who can give me a <u>semantic version of derivability</u>?</p>
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
   
     <p>Easy. By enumerating every truth value combination like every line in
 the table I drew, a conclusion statement is always true
@@ -480,11 +495,11 @@ condition true, and they don’t need to make the conclusion true then.</p>
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 2deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>Yep, despite that your sentence is an arithmetic statement and beyond our propositional logic.
-We’d better only consider the formulas whose truth value can be enumerated!
-It is sometimes stated as “anything can be derived from a contradiction”.</p><p>By the way, semantical derivability is referred to as <em>validity</em> here.</p>
+We’d better only consider the formulas whose truth value can be enumerated!</p><p>Your idea is mostly interesting in the syntactic situation, where
+it is sometimes stated as <u>anything can be derived from a contradiction</u>.</p><p>By the way, semantical derivability is referred to as <em>validity</em> here.</p>
   
   
 </div>
@@ -495,9 +510,9 @@ It is sometimes stated as “anything can be derived from a contradiction”.</p
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -3deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
   
-    <p>I get it. And we have seen the semantical consistency!</p><p>As stated before, the semantical consistency, a.k.a satisfiability, of a group of statements are
+    <p>I get it. After that, here comes the <u>semantical consistency</u>!</p><p>As stated before, the semantical consistency, a.k.a satisfiability, of a group of statements are
 actually about finding a set of values in the world to make every statement
 satisfy.</p>
   
@@ -505,10 +520,10 @@ satisfy.</p>
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 2deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
-    <div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>explain what SAT means</p></div><p>Yes. The semantical consistency is also called satisfiability,
-and we are going to talk about how to know if a statement is satisfiable.
+    <div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>explain what SAT means</p></div><p>Yes. The semantical consistency, actually satisfiability,
+usually comes in the form of whether a statement is satisfiable.
 In propositional logic, it is called <em>Boolean Satisfiability Problem</em>, or
 SAT for short. When we decided which one was lying in the puzzle, we solved
 a SAT problem!</p>
@@ -522,9 +537,9 @@ a SAT problem!</p>
   
   <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
   
-    <p>And finally, syntactic consistency! Like what satisfiability is to derivability,
+    <p>And finally, <u>syntactic consistency</u>! Like what satisfiability is to derivability,
 it’s also about finding a way to reason from some statement to some others!</p><p>Wait, that doesn’t make sense. Anything can be derived from a contradiction,
 and I remember that consistency means no contradiction can be deduced.</p><p>Can I make sure <u>every</u> statement derived is not a contradiction? That should suffice.</p>
   
@@ -532,19 +547,20 @@ and I remember that consistency means no contradiction can be deduced.</p><p>Can
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>Sorry, there are usually infinite derivations from a propositional logic thing.
 That is, a set of statements are inconsistent if contradiction can be deduced.
 However, nothing tells you if they are consistent!</p><p>It’s indeed a weird thing. You can easily tell something is <em>inconsistent</em>,
 but can never make sure it is consistent.</p><p>But try to recall the last time when you factorize a large number!
-We easily see that 1561596 has a factor 2, but it may cost a lot to see if
-1594897 is itself a prime number.</p><p>That asymmetry is partly studied in a field called <em>theory of computation</em>,
+We easily see that <code>1561596</code> has a factor <code>2</code>, but it may cost a lot to see if
+<code>1594897</code> is itself a prime number.</p><p>That asymmetry is partly studied in a field called <em>theory of computation</em>,
 and I believe we are still very superficial in that aspect.</p><div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>give more exercises</p></div><p>Exercise:</p><ol>
 <li>tell me if pythagoras theorem is derivable or valid, in the case when
 someone deduces it from some geometrical magic.</li>
 <li>tell your friends about the difference between something true and
-something provable, as concise as possible. (Bonus: it is a key difference
+something provable, as concise as possible. <br/>
+(Bonus: it is a key difference
 between our minds and a stricter system to think they are equal or not, see
 <a href="https://www.lesswrong.com/posts/ALCnqX6Xx8bpFMZq3/the-cartoon-guide-to-loeb-s-theorem">Löb’s Theorem</a>,
 where by not admitting they are equal, the system find a way to turn down
