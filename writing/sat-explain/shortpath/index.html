@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" crossorigin="anonymous">
     <meta name="generator" content="Astro v2.8.3">
     <title>Cheatsheet</title>
-  <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.7eaff66e.css" />
+  <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.8ef2d1b2.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.a235353a.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.c40637a4.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.92a3fd20.css" /></head>
@@ -78,6 +78,7 @@
       padding: 1rem;
       line-height: 1.5;">
       <dialog class="astro-IXW4XEFC">
+  <div style="text-align: center;" class="astro-IXW4XEFC">------------ ignore the quiz using <kbd class="astro-IXW4XEFC">Space Bar</kbd> ------------</div>
   <b style="font-size: larger; line-height: 50px;" class="astro-IXW4XEFC">Experimental feature: story-based learning?</b>
 
   
@@ -92,7 +93,7 @@
   <script>
     const dialog = document.querySelector("dialog");
     dialog?.showModal();
-
+    
     const links = document.querySelectorAll('a[href="#"]');
     links.forEach((element) => {
       element.addEventListener("click", function (el) {
@@ -100,6 +101,17 @@
         dialog?.close();
       });
     });
+    // shortcut for closing the dialog
+    document.addEventListener(
+      "keydown",
+      (event) => {
+        if (event.key === " ") {
+          dialog?.close();
+          return;
+        }
+      },
+      false,
+    );
 
     function submit() {
       const radios = document.getElementsByName("answer");

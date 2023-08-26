@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" crossorigin="anonymous">
     <meta name="generator" content="Astro v2.8.3">
     <title>Part 4 - DPLL, CDCL and DPLL(T)</title>
-  <link rel="stylesheet" href="/writing/sat-explain/_astro/hoisted.15cc199c.css" />
-<link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.a44440ab.css" />
+  <link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.a44440ab.css" />
+<link rel="stylesheet" href="/writing/sat-explain/_astro/ch1.7db73312.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.a235353a.css" />
 <link rel="stylesheet" href="/writing/sat-explain/_astro/ap1.c40637a4.css" />
-<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.92a3fd20.css" /><script type="module" src="/writing/sat-explain/_astro/hoisted.5ae3b47b.js"></script></head>
+<link rel="stylesheet" href="/writing/sat-explain/_astro/afterwords.92a3fd20.css" /></head>
   <body>
     <div class="header astro-3EF6KSR2">
   <h1 class="header__title astro-3EF6KSR2">Part 4 - DPLL, CDCL and DPLL(T)</h1>
@@ -86,7 +86,7 @@ them.</p>
 </blockquote>
 <div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>adjust the quote format</p></div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 2deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>We have seen the computer’s way to express a propositional
 logic problem as a space of possibilities. It then searches in the space,
@@ -103,7 +103,7 @@ a family of unsatisfactory solutions.</p><p>As we know, every clause has a few c
   
   <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
   
     <p>It’s like that every
 traffic rule only cares about a certain part of one’s driving style.</p><p>Although we need to satisfy every rule to drive safely, we only need to adjust the
@@ -114,7 +114,7 @@ happy.</p>
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>Exactly. If the belt is loosened, the traffic police will be unhappy
 no matter how we use the headlights.</p><p>The same is the clauses. If a clause evaluates to false, we cannot make
@@ -133,7 +133,7 @@ a previous state.</p>
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 2deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -1deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
   
     <p>Wait… Assign? In a search over truth combinations, we always have
 all values assigned and simply flip some to get to a new combination!</p>
@@ -142,7 +142,7 @@ all values assigned and simply flip some to get to a new combination!</p>
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 2deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>You are right. This time, we are still conducting a search, but in the
 space of partial assignment. That is, we start with no variable assigned
@@ -160,7 +160,7 @@ assignment leads to a conflict, the last attempt is re-considered.</p>
   
   <img src="/writing/sat-explain/student2.svg" alt="a thoughtful 18-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(242, 129, 182);--font: IM Fell DW Pica;">
   
     <p>Is this reasoning the same as we’ve talked before, when we decide a
 statement is right according to some previous knowledge?</p>
@@ -169,7 +169,7 @@ statement is right according to some previous knowledge?</p>
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 0deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>It’s a bit close. We have talked about unit propagation to get a result
 statement, and this time we use unit propagation to get some assignments.
@@ -185,7 +185,7 @@ clause.</p>
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
   
     <p>This time let me give an example! Umm… It’s like the school rule, when
 Mistress shouts at us, “Don’t talk!” And the headmaster says, “Don’t talk or get
@@ -215,7 +215,7 @@ conflict with a new clause, and appends it to the original formula.</p>
   <img src="/writing/sat-explain/student1.svg" alt="a curious 10-year-old looking to the left, sketch, parchment, pencil, simple lineart, comic style" class="astro-6736KINT">
   
   
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 1deg;--color: rgb(211, 192, 151);--font: IM Fell DW Pica;">
   
     <p>So the formula is growing, as if it is alive!</p><p>Let me give a new metaphor. Suppose someone puts their hands onto the hotwire,
 while standing on the floor, and they gets electrified. They then knows that
@@ -225,7 +225,7 @@ the two actions should not be done at the same time.</p><p>I’m only wondering 
 </div>
 </div>
 <div style="display: flex; align-items: center;">
-  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: 2deg;--color: aquamarine;--font: IM Fell DW Pica;">
+  <div contenteditable="false" class="astro-MHFLLGJW" style="--randomRotation: -2deg;--color: aquamarine;--font: IM Fell DW Pica;">
   
     <p>I should have foreseen such an example! But that is roughly correct.
 As to the length, well, that is why CDCL is more complicated than DPLL.
@@ -237,14 +237,20 @@ and the difference between them at <a href="https://cse442-17f.github.io/Conflic
 </div>
   <img src="/writing/sat-explain/teacher.svg" alt="a wise teacher in pencil scratch style on parchment" width="80px" height="80px">
 </div>
-<div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>finish the Snippet</p><div id="code-editor" style="width: 80%; height: 300px; border: 1px solid grey" data-language="python" data-title="prolog" data-default="
+<div class="TODO astro-DHEBI6FA"><b class="astro-DHEBI6FA">⚠️ TODO</b><p>finish the Snippet</p><div class="textarea-header astro-ENELRZE6">
+  <h2 class="astro-ENELRZE6">prolog</h2>
+</div>
+
+
+
+<div id="code-editor" style="width: 100%; height: 300px; border: 1px solid grey" data-language="python" data-title="prolog" data-default="
 def A():
 pass
 
-">
+" class="astro-ENELRZE6">
 </div>
 
-<div id="blank"></div></div>
+<div id="button-place" class="astro-ENELRZE6"></div></div>
 <div style="margin: 100px 0;" class="astro-PUWGRYCF"></div>
 
 <div id="bordered" class="astro-PUWGRYCF">
