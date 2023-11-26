@@ -1,0 +1,87 @@
+材料、教程和工具迭代
+
+这些材料是陆陆续续两三个月中存下的，一直懒得转存到博客上，结果现在连记录链接都懒得做了。今天转存一下，也好把临时存链接的文档清空，下次可以记录一些新东西。转存的时候发现标题出现的英文标点会让 Handlebars 解析出问题，下次记得的时候要把程序再改一改。
+
+{{ "stable diffusion QR explained" "https://stable-diffusion-art.com/qr-code/" ("stable diffusion QR" 0.9) (20230612) (Lobster 0.8) (creative 0.7) }} 解释了上一篇文章说到的二维码是如何生成的。
+
+今年的 SO 调查结果到了 {{ "stackoverflow 2023 survey" "https://survey.stackoverflow.co/2023/" ("Stack Overflow" "https://stackoverflow.com/" 0.9) (20230616) }}，哪怕是为了摸鱼也还是值得看看的。
+
+在图形学群里看到 {{ infinigen "https://infinigen.org/" (Blender "https://www.blender.org/" 0.8) (graphics 0.7) (CVPR2023 "https://cvpr2023.thecvf.com/" 0.8) (20230619) }}，全靠规则（不靠数据）生成一个难辨真伪的世界，从外行的眼光看是相当震撼的。
+
+SAMWHO 的新文章感觉写得比之前还好了 {{ hashing-samwho "https://samwho.dev/hashing/" (hash "https://en.wikipedia.org/wiki/Hash_function" 0.8) (SAMWHO "https://samwho.dev/" 0.8) (tutorial 0.7) ("visual guide" 0.8) (Lobsters 0.8) (20230621) }}，虽然限于篇幅，事实上只写了”随机性“，所以这个”哈希函数“的标题起得有些误导性，但的确把计算机科学所需要的随机性讲得比较透彻。文章还引用了一个关于计算机速度的链接 {{ computers-are-fast "https://computers-are-fast.github.io/" ("Julia Evans" "https://jvns.ca/" 0.8) ("interactive tutorial" 0.8) ("computer performance" "https://en.wikipedia.org/wiki/Computer_performance" 0.8) }}，也值得看看。
+
+{{ "Semantic MediaWiki" "https://www.semantic-mediawiki.org/" (wiki "https://en.wikipedia.org/wiki/Wiki" 0.7) ("Hacker News" 0.8) (20230625) }} 是一套 wiki 框架（说不定我会在博客里试试看）。
+
+{{ animejs "https://animejs.com/" (graphics 0.8) (javascript "https://en.wikipedia.org/wiki/JavaScript" 0.8) (animation "https://en.wikipedia.org/wiki/Animation" 0.7) ("Hacker News" 0.8) (20230623) }} 作为一个 js 动画库，虽然好久没更新版本了，但是它首页的那些动画真的很好看。
+
+{{ "No Vehicles In The Park" "https://novehiclesinthepark.com/" ("ethnical dilemma" "https://en.wikipedia.org/wiki/Ethical_dilemma" 0.8) ("Hacker News" 0.8) (20230624) }} 是一套测试人们对于特定情境下某一普适规则的解释的问卷。别的没什么，但那个结果图显示的意思难道是说，大多数人把风筝也当作载具吗？
+
+{{ Neal "https://neal.fun/" (blog 0.8) (game 0.8) }} 新做的 {{ "password-game" "https://neal.fun/password-game/" (Neal 0.9) (game 0.8) ("Hacker News" 0.8) (20230628) (creative 0.7) }} 游戏挺有意思，表面上是要输入一个密码，但交互性越来越强，要解开其他谜题，而且还要满足之前的约束。
+
+{{"Odd One Out" "https://artsandculture.google.com/experiment/odd-one-out" (google "https://google.com" 0.9) (ruanyf 0.8) (20230630) ("text-to-image model" "https://en.wikipedia.org/wiki/Text-to-image_model" 0.7) (game 0.5) }} 是一个 4 选 1 的“找出 AI 生成图片”的测试。
+
+我打算试一试这个语音生成字幕的工具 {{ "whisperapp" "https://godlucky.net/whisperapp/" (20230630) (ruanyf 0.8) ("speech to text" 0.8) }}。
+
+如果不是阮一峰说起，我都不知道发生了这起火车事故 {{"crash in eastern India"  "https://www.reuters.com/graphics/INDIA-CRASH/RAIL-INVESTIGATION/dwvkdwnbkpm/index.html" (reuters "https://www.reuters.com/" 0.9) (ruanyf 0.8) (20230630) ("traffic accident" 0.7) }}。
+
+要是我学汇编的时候有这个在线模拟器 {{ "8086 Compiler" "https://yjdoc2.github.io/8086-emulator-web/" (ruanyf 0.8) (20230630) ("assembly language" "https://en.wikipedia.org/wiki/Assembly_language" 0.8) (interactive 0.7) }} 就好了。
+
+{{ Wolfram "https://writings.stephenwolfram.com/" (blog 0.8) (math 0.8) }} 在他的个人博客里发布了 Mathematica 的版本更新 {{ "Version 13.3 Wolfram" "https://writings.stephenwolfram.com/2023/06/llm-tech-and-a-lot-more-version-13-3-of-wolfram-language-and-mathematica/" (Wolfram 0.9) ("Hacker News" 0.8) (20230630) (Mathematica "https://www.wolfram.com/mathematica/" 0.8) ("large language model" "https://en.wikipedia.org/wiki/Large_language_model" 0.7) }}，除了更新了一些和语言模型交互的内容之外，还加入了 FFI 支持、AR 支持和很多先进的更新，这看上去都不像是一个软件的小版本更新该做的事了。
+
+不靠 js 只靠 css 的浏览器即时通信 {{css-only-chat "https://github.com/kkuchta/css-only-chat" (creative 0.7) ("Hacker News" 0.8) (20230701) ("instant messaging" "https://en.wikipedia.org/wiki/Instant_messaging" 0.7) (CSS "https://developer.mozilla.org/en-US/docs/Web/CSS" 0.7) }}。
+
+编程语言二三事 {{"Programming Language Checklist" "https://www.mcmillen.dev/language_checklist.html" ("programming language" "https://en.wikipedia.org/wiki/Programming_language" 0.8) ("Lobsters" 0.8) (20230702) }}。
+
+从<a href="https://gerikson.com/hnlo/topscore.html">三个论坛顶级访问帖子的一份汇总<a>中看到了这一篇文章 {{ "RE Vaccine" "https://berthub.eu/articles/posts/reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/" (vaccine "https://en.wikipedia.org/wiki/Vaccine" 0.7) (gene "https://en.wikipedia.org/wiki/Gene" 0.8) (Lobsters 0.8) }}，可以说是”面向程序员的遗传密码简介“。
+
+{{ Antfu "https://antfu.me/" (blog 0.8) }} 写的 {{"Refining AI Generated QR Code" "https://antfu.me/posts/ai-qrcode-refine" (QR "https://en.wikipedia.org/wiki/QR_code" 0.8) ("stable diffusion" "https://github.com/CompVis/stable-diffusion" 0.8) }} 重新探索了 QR 绘画的一些技巧。除了原作者和他，我似乎看到其他人也有做类似项目的，现在效果一般，说不定过段时间真能看到系统生成图文双绝 QR 作品的工具。
+
+新的在命令行里和鼠标交互、显示增强功能的工具 {{ "Terminal Click" "https://terminal.click/" (terminal "https://en.wikipedia.org/wiki/The_Terminal" 0.7) (zig "https://ziglang.org/" 0.7) (creative 0.7) (Lobsters 0.8) (20230706) }}，目前尚未公测，将是付费软件。看上去确实挺好，只是感觉还不值得付钱。可以观望一下。顺便，我第一次知道有以举办会议营利的人。
+
+HN 上常常有一些问答帖，比如最近发布的<a href="https://news.ycombinator.com/item?id=36575081">”你的个人博客是什么“</a>。不过这次不同的是，有人把回答收集起来，做成了一个网页 {{ "Hacker News Blogroll" "https://dm.hn/" ("Hacker News" 0.9) (20230706) (blog 0.8) }}。
+
+每日一破案游戏 {{mystery-o-matic "https://mystery-o-matic.com/" (interactive 0.7) (creative 0.6) ("Hacker News" 0.8) (20230708) }}，玩起来有点机械，不过正如 HN 评论所说，整体是个很有意思的点子，而且和本格侦探故事的差距并不大，可能只是叙事方法和内容多样性的量的差别。
+
+机器逆学习挑战 {{ "Announcing the first Machine Unlearning Challenge" "https://ai.googleblog.com/2023/06/announcing-first-machine-unlearning.html" ("machine learning" "https://en.wikipedia.org/wiki/Machine_learning" 0.8) (google 0.8) ("Hacker News" 0.8) (202030709) (creative 0.6) }} 旨在让参赛者找到一种使模型忘记特定数据的办法，挺有意思的。
+
+Firefox 的宏支持在地址栏添加一些有意思的功能，比如变成一个 Wordle 游戏 {{ "Implementing Wordle in the Firefox address bar" "https://eieio.games/nonsense/implementing-wordle-in-the-firefox-address-bar/" (Firefox "https://www.mozilla.org/en-US/firefox/new" 0.7) (Wordle "https://www.nytimes.com/games/wordle/index.html" 0.7) (creative 0.7) (Lobsters 0.8) (20230711) }}。
+
+看样子可能是众筹逐帧临摹一部大电影 {{ "the Free Movie" "https://thefreemovie.buzz/" (movie 0.7) ("Hacker News" 0.8) (20230712) }}，看着挺好玩。评论区提到质量参差不齐并转而讨论如何监管和评价，这是个有意思的转进。还有评论提及了<a href="https://www.starwarsuncut.com/">这个网页</a>，看起来运营得更好。
+
+近几天的几篇底层加速优化文章 {{ "n times faster than C" "https://ipthomas.com/blog/2023/07/n-times-faster-than-c-where-n-128/" (Lobsters 0.8) (20230715) (Rust 0.7) (optimization "https://en.wikipedia.org/wiki/Program_optimization" 0.6) }}，看不懂了。
+
+去年看过 {{ lambdawalks "http://lambdaway.free.fr/lambdawalks/" ("Hacker News" 0.8) (frontend "https://en.wikipedia.org/wiki/Front-end_web_development" 0.7) (creative 0.8) ("functional programming" "https://en.wikipedia.org/wiki/Functional_programming" 0.7) }} 之后就对它念念不忘，总想用用看。但是它的原始代码是用 PHP 写的。之前看过几个 PHP on wasm 的项目，但都不太好。看到 {{ "WordPress Playground" "https://developer.wordpress.org/playground/" (WordPress "https://wordpress.org/" 0.9) ("Hacker News" 0.8) (20230715) }} 时就有点惊讶了，他们自己做了把 PHP 搬运到 wasm 上的工作，我该好好看看。
+
+{{ oimo }} 的新作品 {{ blob "https://oimo.io/works/blob/" (graphics 0.7) (simulation 0.7) (creative 0.6) ("Hacker News" 0.8) (20230715) }} 一如既往地有意思。
+
+{{ ziplm "https://github.com/Futrell/ziplm" (LLM 0.6) ("Hacker News" 0.8) (20230715) (gzip "https://www.gzip.org/" 0.7) }} 是理解语言模型的某种方式。想想看，一个压缩算法同构于一个语言模型……
+
+我没有第一时间注册 ChatGPT、MidJourney、BingAI 这些热门的 AI 项目，主要是不想凑热闹，另外就是它们通常要付费、维护了不知道什么时候到头的 waiting list 且对大陆并不友好。我后来用了点击即用的 {{ Phind "https://phind.com" (LLM 0.7) ("search engine" "https://en.wikipedia.org/wiki/Search_engine" 0.7) }}、{{ Perplexity "https://perplexity.ai" (LLM 0.7) ("search engine" 0.7) }} 和数不清的第三方调用 OpenAI、Bing 的免费访问网站。最近加入这个名单的是 {{ "Claude 2" "https://claude.ai" (LLM 0.7) ("search engine" 0.7) }}，它的注册实在太简单了，填个邮箱加验证码就可以，多少有点替代 password 的那个 <a href="https://www.passkeys.io/">passkey</a> 的味道了。
+
+手工图形学计算 {{ "Human Shader" "https://humanshader.com/" (graphics 0.7) (creative 0.6) ("Hacker News" 0.8) (20230721) }}，建议加入新手套餐。
+
+新的 RFC 出了一个即时消息通信的 {{ RFC9420 "https://blog.phnx.im/rfc-9420-mls/" (RFC "https://en.wikipedia.org/wiki/Request_for_Comments" 0.8) (20230720) }}，感觉是对 P2P 应用的群组设计的。如果它能够做到持久化（在退出应用后一段时间重新加入，能完全回复所有连接并较好恢复下线期间的信息）的话，就是完美的无中心聊天软件了。
+
+{{ ANASTOMOSIS "https://jakebortz.itch.io/anastomosis" (git 0.7) (game 0.8) }} 是个借鉴版本管理概念的游戏，玩家需要在两条时间线分别达到某个状态再合并其中的收获来过关。
+
+忘了在哪看到的 {{ "fff project"  "http://fff.cmiscm.com/#!/main" (graphics 0.8) (interactive 0.8) }}，里面有很多丝滑的前端动画和小互动场景。
+
+一个有意思的益智游戏 {{ "Slide to unlock" "https://cs.uwaterloo.ca/~csk/slide/" (game 0.8) ("Hacker News" 0.8) }}，每根手指走过不同的轨迹还不能离开屏幕，所以需要研究一下手指的拓扑结构。
+
+保存一下这个 <a href="https://whisper.godlucky.net/">录音转文字工具</a>，下次说不定能用上。
+
+看到一个用来把 PDF 文献自动 OCR 出来的项目 {{ nougat "https://github.com/facebookresearch/nougat" ("machine learning" 0.7) ("computer vision" 0.7) (20230901) (PDF 0.7) }}，大快人心。
+
+网页反代服务 {{ Tabserve "https://tabserve.dev/" (IP "https://en.wikipedia.org/wiki/IP_address" 0.7) }}，能用来在内网搭网页，国内用不了。
+
+我没想到纯基于元信息的照片查询也能做到这个程度 {{ "Exploring EXIF" "https://hturan.com/writing/exploring-exif" (photography "https://en.wikipedia.org/wiki/Photography" 0.6) ("digital image" "https://en.wikipedia.org/wiki/Digital_image" 0.8) ("Hacker News" 0.8) (20230907) }}，这里的一些任务现在都是希望 AI 来做的。
+
+之前开博客的原因就是有意思的链接太多了没地方存，结果现在浏览器里还是开着一堆链接。以下把一些链接挪到这里来了，以后不一定还会打开看，只是为了清理我的浏览器。
+
+刚刚读完 {{ "What the fuck Python" "https://github.com/satwikkansal/wtfpython" (Python 0.8) (20230918) }}，这也算是一本 Python 黑魔法书了，又学会几招。
+
+看 GitHub Trending 的时候看到这么一个仓库 {{ "Cpp Core Guidelines" "https://isocpp.github.io/CppCoreGuidelines/" ("C++" "https://en.cppreference.com/w/" 0.7) }}，看起来是 C++17 前 <a href="https://www.stroustrup.com/">Bjarne</a> 准备写的 C++ 风格指南，结果现在都没写完……
+
+一个给静态网站用的搜索引擎 {{ Pagefind "https://pagefind.app/" ("search engine" 0.7) (Lobsters 0.8) (20230914) }}，有点眼馋。
+
+{{ "The Hero’s Journey" "https://tvtropes.org/pmwiki/pmwiki.php/Main/TheHerosJourney" }} 是篇英雄主题故事模板的总结，跟《千面英雄》很像。

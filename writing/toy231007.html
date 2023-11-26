@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" type="text/css" href="./style/style-0.0.4.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>10/07 Hacking on MTGA protocols</title>
+    <meta name="description" content="writings">
+    <meta name="author" content="zac">
+    </head>
+    <body>
+        <style>
+            h3 {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 60;
+            }
+            p {
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        </style>
+        <header>
+            zac's writing
+        </header>
+        <nav>
+            <a href="/writing/">Writing</a>
+            <a href="/">About</a>
+        </nav>
+        <article>
+            <h1>10/07 Hacking on MTGA protocols</h1>
+            <p>
+                Lately I have been playing with <a href="https://magic.wizards.com/en/mtgarena">MTGA</a> network protocols in spare time. For now, this
+                ends with a Python script that gets MTGA credentials, creates a match room,
+                responds to some game prompts (which drops a land or casts a spell in the game)
+                and exits ungracefully. It's only partly done, but I think a post is needed to
+                make a record.
+            </p>
+            <p>
+                I have been playing the game for years. It feels terrible to play in my region, because
+                I always lose connection to the server, unobserved on most occasions. The problem
+                became worse lately when I can't even finish a match. I remembered a Hacker News article
+                <a href="https://www.mayer.cool/writings/Heisting-20-Million-in-Magic-Cards/">on MTGA hacking</a>
+                written by Daniel Meyer,
+                and began to look into the game assets. I'll be satisfied even if it just pops up a connection notice
+                when going offline!
+            </p>
+            <img src="./image/MTGA_loading.png" alt="MTGA loading scene" width="800">
+            <h3>First try: using MTGA assets as a library</h3>
+            <p>
+                As what Meyer's article states, MTGA is a unity game with no extra anti-inspection stuff from
+                tools like <a href="https://github.com/dnSpyEx/dnSpy">dnSpy</a>. Actually I downloaded dnSpy long
+                ago for the exactly same purpose, but simply could not find a way to read the code comfortably.
+                This time I copied the code as Meyer suggests, and linked against some DLLs.
+            </p>
+            <p>
+                However, I'm clumsy and couldn't make injectors to work like Meyer had done. So I decided that if the DLL stands for
+                "dynamic linked library", they should be able to empower my standalone <code>.exe</code> to call
+                some in-game methods. Shouldn't they? That way, I could make the game run in whatever way I want!
+            </p>
+            <p>
+                Well, it turned out that Unity is not happy with that. When I use something like
+                <code>
+                    PAPA papa = GameObject.FindObjectOfType&lt;PAPA&gt;();
+                </code>, it just threw me something like
+                <code>
+                    System.Security.SecurityException:“ECall methods must be packaged into a system module”
+                </code>. So I guess it is not possible to initialize things without a running Unity
+                context.
+            </p>
+            <h3>Next: dynamic debugging</h3>
+            <p>
+                That is harsh for someone who is cracking his first program! Well, I must read the lines
+                of the <code>Assembly-Csharp.dll</code> by my own. But the amount of code is huge, and there
+                is <a href="https://forum.unity.com/threads/what-is-the-entry-point-of-our-script-code.43588/">no explicit entry point</a>
+                in a Unity game. I'm lost.
+            </p>
+            <p>
+                So can I just make the game run and plug in some breakpoints? I consulted dnSpy's doc and that
+                is <a href="https://github.com/dnSpyEx/dnSpy/wiki/Debugging-Unity-Games">possible</a> provided that I have
+                a patched mono dll, which relies on a Unity repo of the exactly same version as the game,
+                and a patcher and build from scratch ...
+            </p>
+            <p>
+                TL;DR: I tried but gave up finally.
+            </p>
+            <h3>Run something at least!</h3>
+            <p>
+                When inspecting the code, I have noticed a class named <code>BootStrap</code> with a
+                lot of Start_Coroutine_xxx things in it, the game loader. As it is going to establish some
+                network connections, I try to mock the network in there. The call structure is a little
+                complicated, even with dnSpy's <code>Ctrl + Shift + R</code> analyzing tool (for example, some methods
+                have no "is used by" field, because their class is stored in some variable whose type is its interface
+                or superclass).
+            </p>
+            <p>
+                It first uses HTTP to knock on a "door bell" (<code>Assets.Core.Code.Doorbell.Doorbell</code>),
+                and gets a TCP address. I constructed the HTTP request using Python's <code>requests</code>
+                package. Some credentials are taken from hard-coded string and the registry, according to 
+                <a href="https://docs.unity3d.com/ScriptReference/PlayerPrefs.html">Unity's documentation</a>.
+            </p>
+            <pre><code>
+                resp = requests.post(uri, data=json.dumps(doorbell_request, ensure_ascii=False, separators=(',', ':')).encode('utf-8'),
+                                headers={"content-type": "application/json"})
+
+                # get the front door uri
+                fdUri = resp.json()['fdURI']
+            </code></pre>
+            <p>
+                By the way, I use Python here as a proof-of-concept implementation.
+                There may be a better language choice, but Python's grammar and packages are convenient
+                enough for my use.
+            </p>
+            <p>
+                Well, it pays off! Imagine my joy when I saw it print something meaningful.
+            </p>
+            <h3>What about good old <code>print</code> in the source code?</h3>
+            <p>
+                The source code is still a mess though. I had no idea what they are doing.
+                The game comes with logging utility in it, and I fortunately found a 
+            </p>
+        </article>
+    </body>
+</html>
